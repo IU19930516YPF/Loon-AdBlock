@@ -114,6 +114,15 @@ function transformSection(sectionBytes, entryFieldNo, lat, lng, acc, stats) {
 function transformResponse(u8, lat, lng, acc) {
   var stats = { replaced: 0 }, i;
   var fields = parseMessage(u8);
+  // 保真度检查：把解析出的原始字段拼回去，必须与输入逐字节一致。
+  // 若不一致说明响应格式超出预期，直接透传，绝不输出可能损坏的数据。
+  var raws = [];
+  for (i = 0; i < fields.length; i++) raws.push(fields[i].raw);
+  var rebuilt = concatBytes(raws);
+  if (rebuilt.length !== u8.length) return { bytes: u8, replaced: 0 };
+  for (i = 0; i < u8.length; i++) {
+    if (rebuilt[i] !== u8[i]) return { bytes: u8, replaced: 0 };
+  }
   var out = [];
   for (i = 0; i < fields.length; i++) {
     var f = fields[i];
@@ -198,8 +207,17 @@ function getPersistentArgs() {
 
     var r = transformResponse(u8, a.lat, a.lng, a.acc);
     if (r.replaced === 0) { doneEmpty(); return; } // 没识别到定位条目，透传
-    // Loon 二进制模式：同时设置 body/bodyBytes/rawBody，确保返回格式正确
-    $done({ body: r.bytes, bodyBytes: r.bytes, rawBody: r.bytes });
+    // 返回修改后的二进制：删除 content-length/content-encoding 让 Loon 重算，避免长度不一致导致客户端解析失败
+    var hdrs = {};
+    try {
+      var oh = $response.headers || {};
+      for (var k in oh) {
+        var lk = ('' + k).toLowerCase();
+        if (lk === 'content-length' || lk === 'content-encoding') continue;
+        hdrs[k] = oh[k];
+      }
+    } catch (e) {}
+    $done({ headers: hdrs, body: r.bytes, bodyBytes: r.bytes, rawBody: r.bytes });
   } catch (e) {
     doneEmpty(); // 任何异常都透传，绝不破坏定位
   }
