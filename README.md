@@ -21,6 +21,7 @@ PUBG / HSBC专用 / wise专用 / PayPal_美国专用），未命中的流量走�
 |------|------|---------------|
 | `rule/AdBlock.list` | 综合去广告规则（约 780 条）：广告/追踪域名拦截 | 规则 → 右上角 + → 从链接导入 |
 | `plugin/AdBlock.plugin` | 综合去广告插件：开屏广告去除（B站/京东/爱奇艺/美团等）+ 知乎去广告 | 配置 → 插件 → 右上角 + → 从链接导入 |
+| `plugin/AdBlockPlus.plugin` | **去广告强力版**：740 条开屏/广告 URL 拦截（含美团 openscreen 新接口）+ 52 条广告清理脚本 + 知乎去广告，拦截开屏广告以及所有广告 | 配置 → 插件 → 右上角 + → 从链接导入 |
 | `rule/Routing.snippet` | 分流规则片段（[Rule] 整段）：按个人策略组定制，App → 策略组映射 + 国内直连 + 兜底 | 配置 → 编辑配置 → [Rule] 区粘贴（见文件头使用方法） |
 
 分开导入链接（raw）：
@@ -28,12 +29,14 @@ PUBG / HSBC专用 / wise专用 / PayPal_美国专用），未命中的流量走�
 ```
 https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/rule/AdBlock.list
 https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/plugin/AdBlock.plugin
+https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/plugin/AdBlockPlus.plugin
 ```
 
 ## 上游来源
 
 - 规则基于 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) 的 `rule/Loon/Advertising/Advertising.list`（上游更新 2026-10-14）
 - 插件基于同仓库的 `rewrite/Loon/AdvertisingScript/AdvertisingScript.plugin`（上游更新 2025-06-06）
+- 强力版插件另含同仓库的 `rewrite/Loon/Advertising/Advertising.plugin`（上游更新 2025-08-26，740 条 rewrite 拦截）
 - 除下述番茄/红果处理外，其余内容与上游原版一致
 
 ## 番茄小说 / 红果短剧去广告：已禁用
