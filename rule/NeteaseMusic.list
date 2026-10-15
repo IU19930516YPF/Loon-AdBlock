@@ -1,0 +1,15 @@
+# ================================================================
+# NeteaseMusic.list —— 网易云音乐去广告规则（Loon）
+# 来源：zbsdsb/loon-adblock-plugins（NeteaseCloudMusic_splash_patch.lpx）
+# 上游更新：2026-08-14；同步到本仓库：2026-10-16
+# 仓库：https://github.com/IU19930516YPF/Loon-AdBlock
+# 内容：网易云开屏素材/广告监测域名拦截（配合 plugin/NeteaseMusicAdBlock.lpx 使用）
+# ================================================================
+
+DOMAIN, iadmusicmat.music.126.net, REJECT
+DOMAIN, iadmusicmatvideo.music.126.net, REJECT
+DOMAIN, iadmat.nosdn.127.net, REJECT
+DOMAIN, iadmatapk.nosdn.127.net, REJECT
+DOMAIN, iad.g.163.com, REJECT
+DOMAIN, iad.service.163.org, REJECT
+DOMAIN, bdlog.tanx.com, REJECT

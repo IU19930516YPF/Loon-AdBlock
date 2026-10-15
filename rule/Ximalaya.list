@@ -1,0 +1,80 @@
+# ================================================================
+# Ximalaya.list —— 喜马拉雅去广告规则（Loon）
+# 来源：XM040523/ximalaya-adblock（ximalaya-adblock.plugin）
+# 上游更新：2026-10-14；同步到本仓库：2026-10-16
+# 仓库：https://github.com/IU19930516YPF/Loon-AdBlock
+# 内容：喜马拉雅自有广告域名 14 条 + 埋点 2 条 + 第三方广告平台 22 条
+# 注意：B 区第三方广告平台规则对所有 App 全局生效
+# ================================================================
+
+# ── A 区 · 喜马拉雅自有广告域名 ──
+DOMAIN-SUFFIX,adse.ximalaya.com,REJECT
+DOMAIN-SUFFIX,ad.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adx.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adbehavior.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adbehavior.wsa.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adbs.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adwbs.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adsehera.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adse.wsa.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adweb.ximalaya.com,REJECT
+DOMAIN-SUFFIX,dns.ximalaya.com,REJECT
+DOMAIN-SUFFIX,ad.test.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adse.test.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adweb.test.ximalaya.com,REJECT
+# DOMAIN-SUFFIX,location.ximalaya.com,REJECT
+# ── A2 区 · 埋点与数据采集 ──
+DOMAIN-SUFFIX,xdcs-collector.ximalaya.com,REJECT
+DOMAIN-SUFFIX,linkeye.ximalaya.com,REJECT
+# ── B 区 · 穿山甲 / GroMore（字节跳动）──
+DOMAIN-SUFFIX,oceanengine.com,REJECT
+DOMAIN-SUFFIX,ad.toutiao.com,REJECT
+DOMAIN-SUFFIX,pangolin16.sgsnssdk.com,REJECT
+# ── B 区 · 字节通用日志上报：拦住只掉统计，不影响功能 ──
+DOMAIN-SUFFIX,log.snssdk.com,REJECT
+DOMAIN-SUFFIX,ib.snssdk.com,REJECT
+# ── B 区 · 优量汇 / 腾讯广告 ──
+DOMAIN-SUFFIX,gdt.qq.com,REJECT
+DOMAIN-SUFFIX,e.qq.com,REJECT
+DOMAIN-SUFFIX,pgdt.gtimg.cn,REJECT
+# ── B 区 · 聚合广告平台 ──
+DOMAIN-SUFFIX,toponad.com,REJECT
+DOMAIN-SUFFIX,mintegral.com,REJECT
+DOMAIN-SUFFIX,mbridge.com,REJECT
+DOMAIN-SUFFIX,sigmob.com,REJECT
+DOMAIN-SUFFIX,ad.e.kuaishou.com,REJECT
+DOMAIN-SUFFIX,mobads.baidu.com,REJECT
+# ── B 区 · 海外广告平台 ──
+DOMAIN-SUFFIX,applovin.com,REJECT
+DOMAIN-SUFFIX,inmobi.com,REJECT
+DOMAIN-SUFFIX,chartboost.com,REJECT
+DOMAIN-SUFFIX,vungle.com,REJECT
+DOMAIN-SUFFIX,unityads.unity3d.com,REJECT
+DOMAIN-SUFFIX,doubleclick.net,REJECT
+DOMAIN-SUFFIX,googleads.g.doubleclick.net,REJECT
+DOMAIN-SUFFIX,pagead2.googlesyndication.com,REJECT
+# ════════════════════════════════════════════════════════════════════
+#  C 区 · 接口级复写（3 条，来自 NobyDa/Script）
+#
+#  原规则（Surge / QuantumultX 语法）：
+#    ^https?:\/\/adse\.ximalaya\.com\/ting\/feed\?appid=     - reject
+#    ^https?:\/\/adse\.ximalaya\.com\/ting\/loading\?appid=  - reject
+#    ^https?:\/\/adse\.ximalaya\.com\/ting\?appid=           - reject
+#
+#  三条命中的是 adse.ximalaya.com 上的广告接口：
+#    /ting/feed?appid=      音频流内插广告
+#    /ting/loading?appid=   开屏广告
+#    /ting?appid=           通用广告请求
+#
+#  为什么用 reject_dict 而不是直接 REJECT：
+#  Loon 的 Rewrite 在规则匹配前执行。这三条先返回 200 + {}，App 拿到一个
+#  合法但空的响应，静默渲染无广告状态，不会触发重试逻辑；A 区再兜住
+#  adse 域名上未被复写覆盖的其余路径。两者叠加，adse 域名的任何请求都
+#  出不去，而已知广告接口走的是「空数据」而非「连接失败」这条更顺的路。
+#
+#  生效前提：D 区 MitM 必须包含 adse.ximalaya.com，否则 HTTPS 无法解密，
+#  本区不生效——此时 A 区仍然兜底，只是退化成直接断开。
+#
+#  想自己加接口（例如抓包后拿到新路径），照下面这行的形状改：
+#    request if ${url} ~= /^https?:\/\/adse\.ximalaya\.com\/新路径/ then reject_dict(200)
+# ════════════════════════════════════════════════════════════════════

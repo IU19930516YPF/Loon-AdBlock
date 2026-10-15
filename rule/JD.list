@@ -1,0 +1,9 @@
+# ================================================================
+# JD.list —— 京东去广告规则（Loon）
+# 来源：zbsdsb/loon-adblock-plugins（JD_remove_ads_v2.lpx）
+# 上游更新：2026-08-12；同步到本仓库：2026-10-16
+# 仓库：https://github.com/IU19930516YPF/Loon-AdBlock
+# 内容：京东诊断接口拦截（配合 plugin/JDAdBlock.lpx 的脚本使用）
+# ================================================================
+
+URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
