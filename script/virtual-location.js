@@ -220,6 +220,7 @@ function getPersistentArgs() {
 
     var r = transformResponse(u8, a.lat, a.lng, a.acc);
     if (r.replaced === 0) { doneEmpty(); return; } // 没识别到定位条目，透传
+    try { $notification.post('虚拟定位', '已替换 ' + r.replaced + ' 个定位条目', '目标: ' + a.lat + ',' + a.lng); } catch (e) {}
     // 返回修改后的二进制：删除 content-length/content-encoding 让 Loon 重算，避免长度不一致导致客户端解析失败
     var hdrs = {};
     try {
