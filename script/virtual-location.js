@@ -160,11 +160,27 @@ function getArgs() {
   return null;
 }
 
+// 从设备持久化存储读取（地图选点页面"储存到设备"写入的）
+function getPersistentArgs() {
+  try {
+    if (typeof $persistentStore === 'undefined') return null;
+    var s = $persistentStore.read('virtual_location_settings');
+    if (!s) return null;
+    var o = JSON.parse(s);
+    if (o && isFinite(o.lng) && isFinite(o.lat)) {
+      return { lng: parseFloat(o.lng), lat: parseFloat(o.lat),
+               acc: Math.round(parseFloat(o.acc) || 25) };
+    }
+  } catch (e) {}
+  return null;
+}
+
 // ---------- 主入口 ----------
 (function main() {
   function doneEmpty() { try { $done({}); } catch (e) { $done(); } }
   try {
-    var a = getArgs();
+    // 优先级：网站保存的坐标 > 插件参数
+    var a = getPersistentArgs() || getArgs();
     // 透传模式：未设置有效坐标则不修改
     if (!a || !isFinite(a.lng) || !isFinite(a.lat)) { doneEmpty(); return; }
     if (Math.abs(a.lat) > 90 || Math.abs(a.lng) > 180) { doneEmpty(); return; }
