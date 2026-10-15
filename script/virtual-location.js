@@ -81,12 +81,18 @@ function parseMessage(u8) {
 // ---------- 坐标替换 ----------
 function replaceLocation(msgBytes, lat, lng, acc, stats) {
   var fields = parseMessage(msgBytes), i;
-  var hasLat = false, hasLng = false;
+  var latV = null, lngV = null;
   for (i = 0; i < fields.length; i++) {
-    if (fields[i].fieldNo === 1 && fields[i].wireType === 0) hasLat = true;
-    if (fields[i].fieldNo === 2 && fields[i].wireType === 0) hasLng = true;
+    if (fields[i].fieldNo === 1 && fields[i].wireType === 0) latV = fields[i].value;
+    if (fields[i].fieldNo === 2 && fields[i].wireType === 0) lngV = fields[i].value;
   }
-  if (!hasLat || !hasLng) return msgBytes; // 不是定位条目，原样返回
+  if (latV === null || lngV === null) return msgBytes; // 不是定位条目，原样返回
+  // 合理性校验：原始值必须是合法经纬度范围（度数 x 1e8），否则可能是其他协议的数据，绝不碰
+  // varint 可能是 64 位补码表示的负数，先转回有符号
+  function toSigned(v) { return v >= 0x8000000000000000n ? v - 0x10000000000000000n : v; }
+  var oLat = toSigned(latV), oLng = toSigned(lngV);
+  if (oLat < -9000000000n || oLat > 9000000000n) return msgBytes;
+  if (oLng < -18000000000n || oLng > 18000000000n) return msgBytes;
   var out = [];
   for (i = 0; i < fields.length; i++) {
     var f = fields[i];
