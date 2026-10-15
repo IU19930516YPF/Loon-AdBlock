@@ -18,6 +18,12 @@
 [Rule]
 # 去广告
 RULE-SET,https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/rule/AdBlock.list,REJECT
+# 喜马拉雅去广告（XM040523，2026-10-16 并入）
+RULE-SET,https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/rule/Ximalaya.list,REJECT
+# 京东去广告规则（zbsdsb，2026-10-16 并入，需配合 plugin/JDAdBlock.lpx 脚本）
+RULE-SET,https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/rule/JD.list,REJECT
+# 网易云音乐去广告规则（zbsdsb，2026-10-16 并入，需配合 plugin/NeteaseMusicAdBlock.lpx 脚本）
+RULE-SET,https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/rule/NeteaseMusic.list,REJECT
 
 # 知乎去广告
 DOMAIN,appcloud.zhihu.com,REJECT
