@@ -198,7 +198,8 @@ function getPersistentArgs() {
 
     var r = transformResponse(u8, a.lat, a.lng, a.acc);
     if (r.replaced === 0) { doneEmpty(); return; } // 没识别到定位条目，透传
-    $done({ body: r.bytes, bodyBytes: r.bytes });
+    // Loon 二进制模式：同时设置 body/bodyBytes/rawBody，确保返回格式正确
+    $done({ body: r.bytes, bodyBytes: r.bytes, rawBody: r.bytes });
   } catch (e) {
     doneEmpty(); // 任何异常都透传，绝不破坏定位
   }
