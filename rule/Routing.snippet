@@ -1,0 +1,67 @@
+# NAME: Loon 分流规则（按个人策略组定制）
+# AUTHOR: IU19930516YPF
+# REPO: https://github.com/IU19930516YPF/Loon-AdBlock
+# UPDATED: 2026-10-16
+#
+# 使用方法：
+# 1. 把下面从 [Rule] 开始的整段，粘贴进你的 Loon.conf 的 [Rule] 区最前面
+#    （Loon App：配置 → 编辑配置 → 找到 [Rule] → 粘贴到 [Rule] 下第一行）
+# 2. 策略名必须和你 Loon 里的策略组名称一字不差，当前用到的有：
+#    Google / Spark / Instagram / X / Telegram / TikTok / YouTube / Netflix /
+#    Streaming / Threads / AI / GitHub / Microsoft / Muse /
+#    PUBG / HSBC专用 / wise专用 / PayPal_美国专用 / Global
+# 3. 如果你的策略组改名了，把下面对应的策略名一起改掉即可
+# 4. 规则从上到下匹配，命中的第一条生效；改完点右上角保存即可生效
+#
+# 数据来源：blackmatrix7/ios_rule_script（RULE-SET 远程引用，自动跟随上游更新）
+
+[Rule]
+# ========== 一、去广告（全部拒绝） ==========
+# 仓库建好并推送后，可把下面这行换成你自己的地址：
+# RULE-SET,https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/rule/AdBlock.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising.list,REJECT
+
+# ========== 二、按 App 分流到你的策略组 ==========
+# --- AI / 支付（专用线路） ---
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Claude/Claude.list,Muse
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/OpenAI/OpenAI.list,AI
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/PayPal/PayPal.list,PayPal_美国专用
+DOMAIN-SUFFIX,wise.com,wise专用
+DOMAIN-SUFFIX,hsbc.com,HSBC专用
+DOMAIN-SUFFIX,hsbc.com.hk,HSBC专用
+DOMAIN-SUFFIX,hsbcnet.com,HSBC专用
+
+# --- 视频流媒体 ---
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTube/YouTube.list,YouTube
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Netflix/Netflix.list,Netflix
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Disney/Disney.list,Streaming
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Hulu/Hulu.list,Streaming
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/PrimeVideo/PrimeVideo.list,Streaming
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/AppleTV/AppleTV.list,Streaming
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBO/HBO.list,Streaming
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/TikTok/TikTok.list,TikTok
+
+# --- 社交 / 通讯 ---
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Telegram/Telegram.list,Telegram
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Twitter/Twitter.list,X
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Threads/Threads.list,Threads
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Instagram/Instagram.list,Instagram
+
+# --- 工具 / 效率 ---
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Google/Google.list,Google
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GitHub/GitHub.list,GitHub
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Microsoft/Microsoft.list,Microsoft
+DOMAIN-SUFFIX,sparkmailapp.com,Spark
+
+# --- 游戏（上游无现成规则，用核心域名；按需补充） ---
+DOMAIN-SUFFIX,pubg.com,PUBG
+DOMAIN-SUFFIX,pubgmobile.com,PUBG
+# Honor of King（王者荣耀）：游戏流量主要走 IP 段，域名分流不可靠，
+# 暂不写规则，走最后的兜底；如需固定走某节点请在策略组里手动切。
+
+# ========== 三、国内服务直连 ==========
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/China/China.list,DIRECT
+
+# ========== 四、兜底：以上都没命中 → 走你的 Global 策略组 ==========
+# 想改默认走手动选择，把 Global 换成 手动选择 即可
+FINAL,Global
