@@ -192,7 +192,13 @@ function getPersistentArgs() {
 
 // ---------- 主入口 ----------
 (function main() {
-  function doneEmpty() { try { $done({}); } catch (e) { $done(); } }
+  var _origU8 = null; // 原始请求体字节，用于显式透传
+  function doneEmpty() {
+    try {
+      if (_origU8) $done({ body: _origU8, bodyBytes: _origU8, rawBody: _origU8 });
+      else $done();
+    } catch (e) { try { $done(); } catch (e2) {} }
+  }
   try {
     // 优先级：网站保存的坐标 > 插件参数
     var a = getPersistentArgs() || getArgs();
@@ -210,6 +216,7 @@ function getPersistentArgs() {
       for (var i = 0; i < body.length; i++) u8[i] = body.charCodeAt(i) & 0xFF;
     }
     if (!u8 || u8.length === 0) { doneEmpty(); return; }
+    _origU8 = u8;
 
     var r = transformResponse(u8, a.lat, a.lng, a.acc);
     if (r.replaced === 0) { doneEmpty(); return; } // 没识别到定位条目，透传
