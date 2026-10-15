@@ -22,6 +22,7 @@ PUBG / HSBC专用 / wise专用 / PayPal_美国专用），未命中的流量走�
 | `rule/AdBlock.list` | 综合去广告规则（约 780 条）：广告/追踪域名拦截 | 规则 → 右上角 + → 从链接导入 |
 | `plugin/AdBlock.plugin` | 综合去广告插件：开屏广告去除（B站/京东/爱奇艺/美团等）+ 知乎去广告 | 配置 → 插件 → 右上角 + → 从链接导入 |
 | `plugin/AdBlockPlus.plugin` | **去广告强力版**：740 条开屏/广告 URL 拦截（含美团 openscreen 新接口）+ 52 条广告清理脚本 + 知乎去广告，拦截开屏广告以及所有广告 | 配置 → 插件 → 右上角 + → 从链接导入 |
+| `plugin/WLoc.plugin` | **WLoc 定位修改**（自研）：修改 Apple 网络定位返回坐标，实现虚拟定位，在插件设置里填经纬度 | 配置 → 插件 → 右上角 + → 从链接导入 |
 | `rule/Routing.snippet` | 分流规则片段（[Rule] 整段）：按个人策略组定制，App → 策略组映射 + 国内直连 + 兜底 | 配置 → 编辑配置 → [Rule] 区粘贴（见文件头使用方法） |
 
 分开导入链接（raw）：
@@ -30,6 +31,7 @@ PUBG / HSBC专用 / wise专用 / PayPal_美国专用），未命中的流量走�
 https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/rule/AdBlock.list
 https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/plugin/AdBlock.plugin
 https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/plugin/AdBlockPlus.plugin
+https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/plugin/WLoc.plugin
 ```
 
 ## 上游来源
