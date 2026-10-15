@@ -15,6 +15,7 @@
 #   1. 导入本插件并启用
 #   2. 在插件设置里填写目标经度 / 纬度（留空 = 透传模式，不修改定位）
 #   3. 开启 MITM，并在 iPhone 上信任 Loon 证书
+#   4. 也可用地图选点页面选点后"储存到设备"（需当前网络走代理）
 #   4. 建议关闭 App 后重进，或开关一次飞行模式，让系统重新请求定位
 #
 # 注意：
@@ -30,6 +31,7 @@ latitude = input, "", tag=目标纬度（留空=透传）
 accuracy = input, "25", tag=定位精度（米）
 
 [Script]
+http-request ^https?:\/\/gs-loc(-cn)?\.apple\.com\/wloc-settings\/save script-path=https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/script/virtual-location-settings.js, timeout=10, tag=虚拟定位-保存接口
 http-response ^https?:\/\/(gs-loc(-cn)?\.apple\.com|gsp-ssl\.ls\.apple\.com|bluedot\.is\.autonavi\.com(\.gds\.alibabadns\.com)?)\/clls\/wloc script-path=https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/script/virtual-location.js, requires-body=true, binary-body-mode=true, timeout=30, tag=虚拟定位, argument=longitude={longitude}&latitude={latitude}&accuracy={accuracy}
 
 [MITM]
