@@ -2,9 +2,6 @@
 # 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 2/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-17）
 # 上游: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloonlite.list
 
-DOMAIN-SUFFIX,fighter-shop.shop
-DOMAIN-SUFFIX,fikppvmul.com
-DOMAIN-SUFFIX,fileh.xyz
 DOMAIN-SUFFIX,filei.top
 DOMAIN-SUFFIX,fileshider.com
 DOMAIN-SUFFIX,fillbpi.com
@@ -323,7 +320,6 @@ DOMAIN-SUFFIX,ssl-google-analytics.l.google.com
 DOMAIN-SUFFIX,static-doubleclick-net.l.google.com
 DOMAIN-SUFFIX,www-google-analytics.l.google.com
 DOMAIN-SUFFIX,www-googletagmanager.l.google.com
-DOMAIN-SUFFIX,www.google1308.com
 DOMAIN-SUFFIX,googleadservices-cn.com
 DOMAIN-SUFFIX,googleadservices.com
 DOMAIN-SUFFIX,googleanalytics.com
@@ -2076,6 +2072,7 @@ DOMAIN-SUFFIX,adcs-ap.myappsget.com
 DOMAIN-SUFFIX,adcs-ue.myappsget.com
 DOMAIN-SUFFIX,mycleanmymac.com
 DOMAIN-SUFFIX,sentry.mydramawave.com
+DOMAIN-SUFFIX,mygeek.cn
 DOMAIN-SUFFIX,ceshi127722.obs.cn-north-4.myhuaweicloud.com
 DOMAIN-SUFFIX,hmdev.obs.cn-east-2.myhuaweicloud.com
 DOMAIN-SUFFIX,nsp-logservice-hiview-p05-dra.obs.ap-southeast-3.myhuaweicloud.com
@@ -2447,7 +2444,6 @@ DOMAIN-SUFFIX,phbyrmvjn.icu
 DOMAIN-SUFFIX,smetrics.marketing.lighting.philips.com.cn
 DOMAIN-SUFFIX,photozoomchina.com
 DOMAIN-SUFFIX,phr3qfcmb.com
-DOMAIN-SUFFIX,pikacn.com
 DOMAIN-SUFFIX,adim.pinduoduo.com
 DOMAIN-SUFFIX,dspsdk.pinduoduo.com
 DOMAIN-SUFFIX,images.pinduoduo.com
@@ -2766,3 +2762,5 @@ DOMAIN-SUFFIX,log.tbs.qq.com
 DOMAIN-SUFFIX,log.weixin.qq.com
 DOMAIN-SUFFIX,log.welive.qq.com
 DOMAIN-SUFFIX,log.wtlogin.qq.com
+DOMAIN-SUFFIX,log1.wtlogin.qq.com
+DOMAIN-SUFFIX,logs.game.qq.com
