@@ -2,8 +2,6 @@
 # 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 3/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-17）
 # 上游: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloonlite.list
 
-DOMAIN-SUFFIX,log1.wtlogin.qq.com
-DOMAIN-SUFFIX,logs.game.qq.com
 DOMAIN-SUFFIX,logsdk.qq.com
 DOMAIN-SUFFIX,masdk.3g.qq.com
 DOMAIN-SUFFIX,masdkv6.3g.qq.com
@@ -1733,6 +1731,7 @@ DOMAIN-SUFFIX,tui.weibo.com
 DOMAIN-SUFFIX,widget.weibo.com
 DOMAIN-SUFFIX,api-z.weidian.com
 DOMAIN-SUFFIX,logtake.weidian.com
+DOMAIN-SUFFIX,weidianyuedu.com
 DOMAIN-SUFFIX,1.weiheshidai.com
 DOMAIN-SUFFIX,statistic.weimobdc.com
 DOMAIN-SUFFIX,badjs.weixinbridge.com
@@ -2137,7 +2136,6 @@ DOMAIN-SUFFIX,xueaaaw.cn
 DOMAIN-SUFFIX,dove.xueqiu.com
 DOMAIN-SUFFIX,open.xueqiu.com
 DOMAIN-SUFFIX,qmas.xueqiu.com
-DOMAIN-SUFFIX,tracking.xueqiu.com
 DOMAIN-SUFFIX,px-itrace.xuexi.cn
 DOMAIN-SUFFIX,ghghgf.xuexiwa.com
 DOMAIN-SUFFIX,xukou.net
