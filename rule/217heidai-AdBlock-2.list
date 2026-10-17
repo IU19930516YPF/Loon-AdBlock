@@ -2,11 +2,6 @@
 # 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 2/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-17）
 # 上游: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloonlite.list
 
-DOMAIN-SUFFIX,filei.top
-DOMAIN-SUFFIX,fileshider.com
-DOMAIN-SUFFIX,fillbpi.com
-DOMAIN-SUFFIX,spatial.fineboost.com
-DOMAIN-SUFFIX,api.firwinds.site
 DOMAIN-SUFFIX,fiwyjar.cn
 DOMAIN-SUFFIX,fjalsr83a6.com
 DOMAIN-SUFFIX,fjpopxgyfrlxvc.com
@@ -22,6 +17,7 @@ DOMAIN-SUFFIX,flat-ads.com
 DOMAIN-SUFFIX,api.flowsixteen.com
 DOMAIN-SUFFIX,flsfzr.cn
 DOMAIN-SUFFIX,flstudiochina.com
+DOMAIN-SUFFIX,api-flow.flyme.cn
 DOMAIN-SUFFIX,bro.flyme.cn
 DOMAIN-SUFFIX,t-e.flyme.cn
 DOMAIN-SUFFIX,t-flow.flyme.cn
@@ -37,6 +33,7 @@ DOMAIN-SUFFIX,foisonad.com
 DOMAIN-SUFFIX,metrics.ford.com
 DOMAIN-SUFFIX,smetrics.ford.com
 DOMAIN-SUFFIX,smetrics.sandbox.ford.com
+DOMAIN-SUFFIX,3zmb53.fordmodels.cn
 DOMAIN-SUFFIX,forestseasons.com.cn
 DOMAIN-SUFFIX,formysql.com
 DOMAIN-SUFFIX,sentry-web.fosunhanig.com
@@ -57,6 +54,7 @@ DOMAIN-SUFFIX,mon11-misc.fqnovel.com
 DOMAIN-SUFFIX,mon11-misc-lf.fqnovel.com
 DOMAIN-SUFFIX,mon11-misc-lq.fqnovel.com
 DOMAIN-SUFFIX,mon3-misc-lf.fqnovel.com
+DOMAIN-SUFFIX,rtlog3-applog.fqnovel.com
 DOMAIN-SUFFIX,rtlog3-applog-hl.fqnovel.com
 DOMAIN-SUFFIX,rtlog3-applog-lf.fqnovel.com
 DOMAIN-SUFFIX,rtlog3-applog-lq.fqnovel.com
@@ -140,6 +138,7 @@ DOMAIN-SUFFIX,g8nwdolod.com
 DOMAIN-SUFFIX,g9cvic3khh.com
 DOMAIN-SUFFIX,gainifyads.com
 DOMAIN-SUFFIX,fc.gaizong.cn
+DOMAIN-SUFFIX,sentry.galaxy-immi.com
 DOMAIN-SUFFIX,gameanalytics.com
 DOMAIN-SUFFIX,ng-vn-notice.gameitop.com
 DOMAIN-SUFFIX,ad.gameley.com
@@ -180,6 +179,7 @@ DOMAIN-SUFFIX,gdtimg.com
 DOMAIN-SUFFIX,gdtqq.cn
 DOMAIN-SUFFIX,ge99lo1z2.com
 DOMAIN-SUFFIX,geav5man0.com
+DOMAIN-SUFFIX,geet3xanxc.com
 DOMAIN-SUFFIX,log.geetest.com
 DOMAIN-SUFFIX,gef153x1u.com
 DOMAIN-SUFFIX,gefxhyby9.com
@@ -320,6 +320,7 @@ DOMAIN-SUFFIX,ssl-google-analytics.l.google.com
 DOMAIN-SUFFIX,static-doubleclick-net.l.google.com
 DOMAIN-SUFFIX,www-google-analytics.l.google.com
 DOMAIN-SUFFIX,www-googletagmanager.l.google.com
+DOMAIN-SUFFIX,google1308.com
 DOMAIN-SUFFIX,googleadservices-cn.com
 DOMAIN-SUFFIX,googleadservices.com
 DOMAIN-SUFFIX,googleanalytics.com
@@ -336,6 +337,7 @@ DOMAIN-SUFFIX,googletraveladservices.com
 DOMAIN-SUFFIX,googlevads-cn.com
 DOMAIN-SUFFIX,goqix4lm5.com
 DOMAIN-SUFFIX,gorituals.shop
+DOMAIN-SUFFIX,gosizeer.shop
 DOMAIN-SUFFIX,gostats.cn
 DOMAIN-SUFFIX,kad.gotokeep.com
 DOMAIN-SUFFIX,govkunming.cn
@@ -347,9 +349,11 @@ DOMAIN-SUFFIX,gr8psejq9.com
 DOMAIN-SUFFIX,granbbkzs3.com
 DOMAIN-SUFFIX,cms.grandcloud.cn
 DOMAIN-SUFFIX,download.grandcloud.cn
+DOMAIN-SUFFIX,grestamivoq.info
 DOMAIN-SUFFIX,z.grfyw.com
 DOMAIN-SUFFIX,gridsum.com
 DOMAIN-SUFFIX,gridsumdissector.com
+DOMAIN-SUFFIX,grimble-furr.shop
 DOMAIN-SUFFIX,grituals.shop
 DOMAIN-SUFFIX,countly.growatt.com
 DOMAIN-SUFFIX,growingio.com
@@ -447,6 +451,7 @@ DOMAIN-SUFFIX,haldenorixa.pro
 DOMAIN-SUFFIX,halloweencostumes-ie.shop
 DOMAIN-SUFFIX,haloapps.com
 DOMAIN-SUFFIX,adx.halomobi.com
+DOMAIN-SUFFIX,halopaper.cn
 DOMAIN-SUFFIX,handbrake.es
 DOMAIN-SUFFIX,go.hangzhou.com.cn
 DOMAIN-SUFFIX,hanlanad.com
@@ -530,6 +535,7 @@ DOMAIN-SUFFIX,data.ads.heytapmobi.com
 DOMAIN-SUFFIX,dc-dragate-cn.heytapmobi.com
 DOMAIN-SUFFIX,dcc-awareness-cn.heytapmobi.com
 DOMAIN-SUFFIX,device-ups.push.heytapmobi.com
+DOMAIN-SUFFIX,dragate-in.dc.heytapmobi.com
 DOMAIN-SUFFIX,dragate-sg.dc.heytapmobi.com
 DOMAIN-SUFFIX,httpdns.ocloud.heytapmobi.com
 DOMAIN-SUFFIX,i-sg01a.ocloud.heytapmobi.com
@@ -554,6 +560,7 @@ DOMAIN-SUFFIX,oversea-nebula-sg.heytapmobi.com
 DOMAIN-SUFFIX,push-ads-cn.heytapmobi.com
 DOMAIN-SUFFIX,report.uc.heytapmobi.com
 DOMAIN-SUFFIX,ssp-adx.ads.heytapmobi.com
+DOMAIN-SUFFIX,stat.browser.heytapmobi.com
 DOMAIN-SUFFIX,stg-data-f.ads.heytapmobi.com
 DOMAIN-SUFFIX,stg-data-id.ads.heytapmobi.com
 DOMAIN-SUFFIX,stg-data-in.ads.heytapmobi.com
@@ -593,6 +600,7 @@ DOMAIN-SUFFIX,omes-sec.heytapmobile.com
 DOMAIN-SUFFIX,report-sg.uc.heytapmobile.com
 DOMAIN-SUFFIX,slb-apisnd-in.heytapmobile.com
 DOMAIN-SUFFIX,video-api-gl.heytapmobile.com
+DOMAIN-SUFFIX,sentry.heytea-co.com
 DOMAIN-SUFFIX,hffxc.com
 DOMAIN-SUFFIX,hfqdipw.cn
 DOMAIN-SUFFIX,hfr8l4ebdt.com
@@ -658,6 +666,7 @@ DOMAIN-SUFFIX,msg-na.hismarttv.com
 DOMAIN-SUFFIX,unified-ter-na.hismarttv.com
 DOMAIN-SUFFIX,upgrade-update.hismarttv.com
 DOMAIN-SUFFIX,v2-api-channel-launcher.hismarttv.com
+DOMAIN-SUFFIX,histar.com
 DOMAIN-SUFFIX,stun.hitv.com
 DOMAIN-SUFFIX,hivecn.cn
 DOMAIN-SUFFIX,hj67fadszx.appspot.com
@@ -695,6 +704,7 @@ DOMAIN-SUFFIX,homeflashsale-eu.shop
 DOMAIN-SUFFIX,log.homestyler.com
 DOMAIN-SUFFIX,homeware-store.shop
 DOMAIN-SUFFIX,homeyoupl.shop
+DOMAIN-SUFFIX,homla.fit
 DOMAIN-SUFFIX,homlaspl.shop
 DOMAIN-SUFFIX,w88.hongkongdisneyland.com.cn
 DOMAIN-SUFFIX,ads.honor.com
@@ -1786,6 +1796,7 @@ DOMAIN-SUFFIX,tr.email.medicalexpo.com
 DOMAIN-SUFFIX,medicine4.top
 DOMAIN-SUFFIX,medproad.com
 DOMAIN-SUFFIX,ad.meetyouintl.com
+DOMAIN-SUFFIX,sentry.mehiya.com
 DOMAIN-SUFFIX,meihu56.cn
 DOMAIN-SUFFIX,meiqia.com
 DOMAIN-SUFFIX,sentry.meitu-int.com
@@ -2033,6 +2044,7 @@ DOMAIN-SUFFIX,mpstop.top
 DOMAIN-SUFFIX,mputq031w.com
 DOMAIN-SUFFIX,mq82ovaqu.com
 DOMAIN-SUFFIX,mqaae0c7m1.com
+DOMAIN-SUFFIX,mqgxw8ng75.com
 DOMAIN-SUFFIX,mqo60hadqz.com
 DOMAIN-SUFFIX,mqrqtvzwdl.com
 DOMAIN-SUFFIX,mqunqwsyrw.com
@@ -2402,6 +2414,7 @@ DOMAIN-SUFFIX,ads-monitoring.papegames.com
 DOMAIN-SUFFIX,analytics.partnerboost.com
 DOMAIN-SUFFIX,app.partnerboost.com
 DOMAIN-SUFFIX,partnermatic.com
+DOMAIN-SUFFIX,passagethruindia.com
 DOMAIN-SUFFIX,bt1.patexplorer.com
 DOMAIN-SUFFIX,patriotic66.top
 DOMAIN-SUFFIX,pavdiibdvr.com
@@ -2690,6 +2703,7 @@ DOMAIN-SUFFIX,gvideo.qpic.cn
 DOMAIN-SUFFIX,mmgame.qpic.cn
 DOMAIN-SUFFIX,analytics-ccu.qpyou.cn
 DOMAIN-SUFFIX,analytics-log.qpyou.cn
+DOMAIN-SUFFIX,a.ac.qq.com
 DOMAIN-SUFFIX,act.qq.com
 DOMAIN-SUFFIX,ad.qq.com
 DOMAIN-SUFFIX,adfilter.imtt.qq.com
@@ -2756,6 +2770,7 @@ DOMAIN-SUFFIX,ipv6.kg.qq.com
 DOMAIN-SUFFIX,iwan-s.video.qq.com
 DOMAIN-SUFFIX,jpush.html5.qq.com
 DOMAIN-SUFFIX,kde.qq.com
+DOMAIN-SUFFIX,kuaibao.qq.com
 DOMAIN-SUFFIX,l.qq.com
 DOMAIN-SUFFIX,lcsdk.3g.qq.com
 DOMAIN-SUFFIX,log.tbs.qq.com
@@ -2764,3 +2779,7 @@ DOMAIN-SUFFIX,log.welive.qq.com
 DOMAIN-SUFFIX,log.wtlogin.qq.com
 DOMAIN-SUFFIX,log1.wtlogin.qq.com
 DOMAIN-SUFFIX,logs.game.qq.com
+DOMAIN-SUFFIX,logsdk.qq.com
+DOMAIN-SUFFIX,masdk.3g.qq.com
+DOMAIN-SUFFIX,masdkv6.3g.qq.com
+DOMAIN-SUFFIX,mazu.3g.qq.com
