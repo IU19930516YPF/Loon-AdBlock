@@ -1,5 +1,5 @@
 # 本文件来源: https://github.com/217heidai/adblockfilters (rules/adblockloonlite.list，去广告合并规则 Lite 版)
-# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 1/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-18）
+# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 1/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-19）
 # 上游: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloonlite.list
 
 DOMAIN-SUFFIX,kwflvcdn.000dn.com
@@ -529,7 +529,6 @@ DOMAIN-SUFFIX,4foutlet.shop
 DOMAIN-SUFFIX,4foutlets.shop
 DOMAIN-SUFFIX,4fshopes.shop
 DOMAIN-SUFFIX,4fshops.shop
-DOMAIN-SUFFIX,4fsportspl.shop
 DOMAIN-SUFFIX,4fstores.shop
 DOMAIN-SUFFIX,4grqz7x6z3.com
 DOMAIN-SUFFIX,4h87y9pc59.com
@@ -2520,11 +2519,7 @@ DOMAIN-SUFFIX,ecuc6mmwt.com
 DOMAIN-SUFFIX,ecudsc.cn
 DOMAIN-SUFFIX,edgeone.app
 DOMAIN-SUFFIX,balanced-red-emhnkdfj-dp7g2kvqxx8n.edgeone.dev
-DOMAIN-SUFFIX,congenial-goggles-dpuw9y8aky56.edgeone.dev
 DOMAIN-SUFFIX,copyright-policy-review-form.edgeone.dev
-DOMAIN-SUFFIX,explicit-amaranth-qng8tdbe.edgeone.dev
-DOMAIN-SUFFIX,gennewggffyjhsad.edgeone.dev
-DOMAIN-SUFFIX,horrible-coral-ugrwxhbj.edgeone.dev
 DOMAIN-SUFFIX,kerenare54-dpwekmulre85.edgeone.dev
 DOMAIN-SUFFIX,lexical-brown-irnlppnt.edgeone.dev
 DOMAIN-SUFFIX,ofornaogu-dpzv6dife1hh.edgeone.dev
@@ -2732,3 +2727,6 @@ DOMAIN-SUFFIX,fjtroip.cn
 DOMAIN-SUFFIX,fk0hwmdoh.com
 DOMAIN-SUFFIX,fk8k4t55e.com
 DOMAIN-SUFFIX,datareport.fkw.com
+DOMAIN-SUFFIX,fl0hg5wlr.com
+DOMAIN-SUFFIX,fl4md7mm8.com
+DOMAIN-SUFFIX,fl7i15bxzr.com
