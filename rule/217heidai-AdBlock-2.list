@@ -1,10 +1,7 @@
 # 本文件来源: https://github.com/217heidai/adblockfilters (rules/adblockloonlite.list，去广告合并规则 Lite 版)
-# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 2/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-18）
+# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 2/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-19）
 # 上游: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloonlite.list
 
-DOMAIN-SUFFIX,fl0hg5wlr.com
-DOMAIN-SUFFIX,fl4md7mm8.com
-DOMAIN-SUFFIX,fl7i15bxzr.com
 DOMAIN-SUFFIX,flash.cn
 DOMAIN-SUFFIX,flat-ads.com
 DOMAIN-SUFFIX,api.flowsixteen.com
@@ -1788,7 +1785,6 @@ DOMAIN-SUFFIX,tongji-res1.meizu.com
 DOMAIN-SUFFIX,umid.orion.meizu.com
 DOMAIN-SUFFIX,uxip.meizu.com
 DOMAIN-SUFFIX,matomo.meldingcloud.com
-DOMAIN-SUFFIX,meobsogu.shop
 DOMAIN-SUFFIX,tracking.c.mercedes-benz.com.cn
 DOMAIN-SUFFIX,tracking.m.mercedes-benz.com.cn
 DOMAIN-SUFFIX,tracking.t.mercedes-benz.com.cn
@@ -2050,7 +2046,6 @@ DOMAIN-SUFFIX,sfsafsadfjbbj-dsafjnb-1321533417.cos.ap-beijing.myqcloud.com
 DOMAIN-SUFFIX,datarangers-event.myrightone.com
 DOMAIN-SUFFIX,maoamao.myshoplaza.com
 DOMAIN-SUFFIX,nsabiu.myshoplaza.com
-DOMAIN-SUFFIX,ugg-boshoes.myshoplaza.com
 DOMAIN-SUFFIX,zeemlight.myshoplaza.com
 DOMAIN-SUFFIX,sentry-new.myshopline.com
 DOMAIN-SUFFIX,analytics.myshoptago.com
@@ -2429,7 +2424,6 @@ DOMAIN-SUFFIX,load.tbyvvwvv.plasmatreatment.cn
 DOMAIN-SUFFIX,play-analytics.com
 DOMAIN-SUFFIX,playit2019.com
 DOMAIN-SUFFIX,bdx.playnext.cn
-DOMAIN-SUFFIX,plrituals.shop
 DOMAIN-SUFFIX,plsec7wll8.com
 DOMAIN-SUFFIX,pmensrl.cn
 DOMAIN-SUFFIX,pmt0g2rugw.com
@@ -2714,3 +2708,4 @@ DOMAIN-SUFFIX,omgmta1.qq.com
 DOMAIN-SUFFIX,openapi.guanjia.qq.com
 DOMAIN-SUFFIX,oss.weread.qq.com
 DOMAIN-SUFFIX,oth.str.mdt.qq.com
+DOMAIN-SUFFIX,p.store.qq.com
