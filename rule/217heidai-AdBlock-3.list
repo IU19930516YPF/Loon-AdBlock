@@ -1,8 +1,7 @@
 # 本文件来源: https://github.com/217heidai/adblockfilters (rules/adblockloonlite.list，去广告合并规则 Lite 版)
-# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 3/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-18）
+# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 3/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-19）
 # 上游: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloonlite.list
 
-DOMAIN-SUFFIX,p.store.qq.com
 DOMAIN-SUFFIX,p2p.qq.com
 DOMAIN-SUFFIX,p2pupdate.gamedl.qq.com
 DOMAIN-SUFFIX,p2pupgrade.gamedl.qq.com
@@ -252,7 +251,6 @@ DOMAIN-SUFFIX,rib0nsgx6.com
 DOMAIN-SUFFIX,richh.cn
 DOMAIN-SUFFIX,rio9s1zdpd.com
 DOMAIN-SUFFIX,ritualsbodys.shop
-DOMAIN-SUFFIX,ritualspl.shop
 DOMAIN-SUFFIX,bi-tracker-global.rivergame.net
 DOMAIN-SUFFIX,rk2kpo4ef.com
 DOMAIN-SUFFIX,rkcfmfm97.com
@@ -428,7 +426,6 @@ DOMAIN-SUFFIX,shilian168.cn
 DOMAIN-SUFFIX,ad.shobo.cn
 DOMAIN-SUFFIX,1.shopit.cn
 DOMAIN-SUFFIX,sentry.shoplazza.com
-DOMAIN-SUFFIX,shopxenial.shop
 DOMAIN-SUFFIX,ads-shopping.shouqianba.com
 DOMAIN-SUFFIX,shrobotics.cn
 DOMAIN-SUFFIX,shuiguo.com
@@ -1080,7 +1077,6 @@ DOMAIN-SUFFIX,txscn.cn
 DOMAIN-SUFFIX,m.txtxr.com
 DOMAIN-SUFFIX,ty.cn
 DOMAIN-SUFFIX,tad.tygem.com
-DOMAIN-SUFFIX,tylerfoster.shop
 DOMAIN-SUFFIX,tzifhmvuju.com
 DOMAIN-SUFFIX,tzp61mplc.com
 DOMAIN-SUFFIX,u0h2psmoz.com
