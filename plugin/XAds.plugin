@@ -1,0 +1,10 @@
+#!name=X去广告
+#!desc=v1.0.0：过滤 X 时间线推广推文（promotedMetadata 实证字段，覆盖主页/搜索/个人页/回复页/沉浸媒体）+ Who to follow、社区推荐等推荐模块（按 entryId 前缀过滤，移除明细打 [XAds] 日志待真机校准）。仅本地过滤服务器下发内容，不改账号数据。抓包（2026-10-22）只含网页版启动流量、无时间线正文，字段依据为 limbopro/Adblock4limbo 现行规则与 cantwork/Loon 脚本两处实证。
+#!author=Muse（豆包维护）
+#!homepage=https://x.com
+
+[Script]
+http-response ^https?:\/\/((api\.(x|twitter)\.com)\/graphql\/|(x\.com)\/i\/api\/graphql\/) script-path=https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/script/xads.js?v=1.0.0, requires-body=true, max-size=10485760, tag=X去广告, enable=true
+
+[MITM]
+hostname = api.x.com, api.twitter.com, x.com
