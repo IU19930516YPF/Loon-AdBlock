@@ -1,11 +1,11 @@
 #!name=4K影视本地改写
-#!desc=v1.0.1：个人中心显示改写（永久VIP徽章/余额999999/金币888888）+ 播放页去前贴广告、隐藏会员横幅。仅本地生效：4K地址由服务器按真实会员下发（普通会员只给1080p），假余额无法真实消费。v1.0.1：改用 Loon 原生脚本语法（v1.0.0 误用 QX 格式，Loon 不解析导致不生效）。
+#!desc=v1.0.1：个人中心显示改写（永久VIP徽章/余额999999/金币888888）+ 播放页去前贴广告、隐藏会员横幅。仅本地生效：4K地址由服务器按真实会员下发（普通会员只给1080p），假余额无法真实消费。v1.0.1：改用 Loon 原生脚本语法（v1.0.0 误用 QX 格式，Loon 不解析导致不生效）；脚本手动运行安静退出（bbdanci v1.0.3 同款保护）。
 #!author=Muse（豆包维护）
 #!homepage=https://www.4kvm.top
 
 [Script]
-http-response ^https?:\/\/.*4kvm\.(top|site|net)\/profile script-path=https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/script/4ktv.js, requires-body=true, max-size=1048576, tag=4K影视个人中心, enable=true
-http-response ^https?:\/\/.*4kvm\.(top|site|net)\/play\/ script-path=https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/script/4ktv.js, requires-body=true, max-size=1048576, tag=4K影视播放页, enable=true
+http-response ^https?:\/\/.*4kvm\.(top|site|net)\/profile script-path=https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/script/4ktv.js?v=1.0.1, requires-body=true, max-size=1048576, tag=4K影视个人中心, enable=true
+http-response ^https?:\/\/.*4kvm\.(top|site|net)\/play\/ script-path=https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/script/4ktv.js?v=1.0.1, requires-body=true, max-size=1048576, tag=4K影视播放页, enable=true
 
 [MITM]
 hostname = *.4kvm.top, *.4kvm.site, *.4kvm.net
