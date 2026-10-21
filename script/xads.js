@@ -1,5 +1,7 @@
 /*
- * X 去广告 v1.0.0（Loon http-response）
+ * X 去广告 v1.0.1（Loon http-response）
+ * v1.0.1：插件侧匹配收窄到时间线类接口；脚本加安全网——摘除数超过候选条目一半
+ *         （疑似结构变化/误匹配）时整份原样放行并打 [XAds] safety bail 日志。
  * 维护：豆包（入仓 IU19930516YPF/Loon-AdBlock，scripts-24h-maintain 巡检）
  *
  * 做什么：过滤 X 时间线响应里的两类内容——
@@ -18,7 +20,7 @@
  * 无 $response 上下文（手动运行）安静退出。
  */
 (function () {
-  var VERSION = "1.0.0";
+  var VERSION = "1.0.1";
   var TAG = "X去广告";
 
   if (typeof $response === "undefined" || !$response || typeof $response.body !== "string") {
@@ -52,6 +54,7 @@
   ];
 
   var removed = [];
+  var candidates = 0; // 带 entryId 或 itemContent 的候选条目数（安全网的分母）
 
   function itemContentOf(el) {
     if (!el || typeof el !== "object") return null;
@@ -85,8 +88,10 @@
     if (Array.isArray(node)) {
       // 先过滤本层坏元素，再深入幸存者
       for (var i = node.length - 1; i >= 0; i--) {
-        if (isBadElement(node[i])) {
-          removed.push(label(node[i]));
+        var el = node[i];
+        if (el && typeof el === "object" && (typeof el.entryId === "string" || itemContentOf(el))) candidates++;
+        if (isBadElement(el)) {
+          removed.push(label(el));
           node.splice(i, 1);
         }
       }
@@ -107,6 +112,13 @@
   }
 
   if (removed.length === 0) {
+    $done({});
+    return;
+  }
+
+  // 安全网：摘除比例异常（超过候选一半）说明结构和预期不符，整份原样放行
+  if (candidates >= 4 && removed.length * 2 > candidates) {
+    console.log("[XAds] v" + VERSION + " safety bail: removed " + removed.length + "/" + candidates + " candidates, passthrough");
     $done({});
     return;
   }
