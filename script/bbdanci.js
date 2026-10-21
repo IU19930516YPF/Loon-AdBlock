@@ -1,4 +1,4 @@
-// 不背单词 大会员/装备/酷币 本地改写 v1.0.2（2026-10-21，豆包维护）
+// 不背单词 大会员/装备/酷币 本地改写 v1.0.3（2026-10-21，豆包维护）
 // 依据用户真机抓包：权益由 learnywhere.cn 的 bb-user-category 接口下发，App 本地判定。
 // - bb-user-category：9 个权益字段（bbvip + 8 个装备）全部改终身 VIP（不动 category 考试分类）
 //   字段形状依据 App 自家 H5 代码：type 用 "svip"（终身档），到期字段是 expire_date（日期串），不是旧社区脚本的 expire_time
@@ -9,7 +9,11 @@
 const VIP = { type: "svip", expire_date: "2099-12-31", is_lifetime: 1, expire_time: 4102415999000, end_time: 4102415999000 };
 const COIN = 999999;
 
-try {
+// 手动运行/CRON 上下文没有 $request/$response：安静退出并留一句人话提示，不报错
+if (typeof $request === "undefined" || typeof $response === "undefined") {
+  console.log("[BBDanci] 这是 http-response 改写脚本，靠不背单词的请求触发，不要手动运行。判断是否生效：用完 App 后回日志列表找 Script Type 为 HTTP-RESPONSE 的本脚本记录。");
+  $done({});
+} else try {
   const url = ($request && $request.url) || "";
   let body = $response && $response.body;
   if (!body) { $done({}); }
