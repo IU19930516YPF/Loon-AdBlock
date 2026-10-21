@@ -1,0 +1,10 @@
+#!name=不背单词大会员
+#!desc=v1.0.0：bb-user-category 的 9 个权益（大会员+柯林斯/词根/派生/近义词/颜值包/单词本等装备）改终身 VIP，App 本地判定、功能真解锁；酷币余额显示改 999999（购买页/明细页）。注意：酷币是服务器记账，真花酷币时服务器按真实余额校验，假余额花不出去；会员身份标识、个人主页显示同步生效。
+#!author=Muse（豆包维护）
+#!homepage=https://www.learnywhere.cn
+
+[Script]
+http-response ^https?:\/\/learnywhere\.cn\/api\/(activity\/common\/bb-user-category|buy\/common\/bb\/bbvip\/purchase|bb\/coin-records) script-path=https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/script/bbdanci.js, requires-body=true, max-size=1048576, tag=不背单词大会员, enable=true
+
+[MITM]
+hostname = learnywhere.cn
