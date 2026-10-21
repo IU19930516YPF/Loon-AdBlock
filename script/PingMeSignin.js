@@ -1,6 +1,6 @@
 /*
 @Name：PingMe 自动化签到+视频奖励（优化版）
-@Version：1.2.0（2026-10-21，新增多账号支持）
+@Version：1.2.1（2026-10-21，修复同账号重复识别 + 只保留最近 2 个账号）
 @Repo：https://github.com/IU19930516YPF/Loon-AdBlock（script/PingMeSignin.js）
 @Author：原版 fmz200/奶思（基于 ZenmoFeiShi 版）；优化维护：豆包
 @优化点：
@@ -33,6 +33,11 @@ const VIDEO_DELAY = 8000;
 const REQ_TIMEOUT_MS = 30000; // 单次请求超时 30 秒（原版未设，吃 Loon 默认 ~5 秒）
 const MAX_RETRY = 3;          // 每个请求最多尝试 3 次
 const RETRY_DELAY = 3000;     // 重试间隔基数（第 n 次重试前等待 3n 秒）
+// 易变参数（每次请求都变，如 time/nonce/sign，不能用来认账号——v1.2.0 就是栽在这上面，同一账号被存了两份）
+const VOLATILE_RE = /sign|time|stamp|nonce|rand|trace|seq|session/i;
+const UID_KEYS = ['uid', 'userId', 'user_id', 'userid', 'userID', 'memberId', 'member_id', 'accountId', 'account_id'];
+const TOKEN_HEADERS = ['authorization', 'token', 'x-token', 'access-token', 'accesstoken', 'user-token', 'auth-token'];
+const MAX_ACCOUNTS = 2; // 用户只有两个 PingMe 账号，只保留最近抓到的两个
 
 const isRequestMode = (typeof $request !== 'undefined' && !!$request && !!$request.url);
 
@@ -44,16 +49,29 @@ if (isRequestMode) {
         .catch(e => { console.log('未捕获异常：' + (e && e.stack ? e.stack : e)); $.done(); });
 }
 
-// 账号标识：优先用参数里的 uid 类字段，其次用 Authorization 头，最后用全参数串兜底
+function headerVal(headers, name) {
+    const lower = name.toLowerCase();
+    for (const k of Object.keys(headers || {})) if (k.toLowerCase() === lower) return headers[k];
+    return '';
+}
+
+// 账号标识：uid 类参数 → 令牌类请求头 → 去掉易变参数后的稳定签名
 function accountIdOf(capture) {
     const p = (capture && capture.paramsRaw) || {};
     const h = (capture && capture.headers) || {};
-    const uid = p.uid || p.userId || p.user_id || p.userid || '';
-    if (uid) return 'uid:' + uid;
-    const auth = h['Authorization'] || h['authorization'] || '';
-    if (auth) return 'auth:' + auth;
-    const rest = Object.keys(p).filter(k => k !== 'sign' && k !== 'signDate').sort().map(k => `${k}=${p[k]}`).join('&');
+    for (const k of UID_KEYS) if (p[k]) return 'uid:' + p[k];
+    for (const name of TOKEN_HEADERS) { const v = headerVal(h, name); if (v) return 'auth:' + v; }
+    const rest = Object.keys(p).filter(k => !VOLATILE_RE.test(k)).sort().map(k => `${k}=${p[k]}`).join('&');
     return 'raw:' + MD5(rest);
+}
+
+// 按账号标识去重（后出现的覆盖先出现的）+ 只保留最近 MAX_ACCOUNTS 个
+function dedupeAccounts(list) {
+    const seen = new Map();
+    for (const c of list) { if (c && c.paramsRaw) seen.set(accountIdOf(c), c); }
+    let out = Array.from(seen.values());
+    if (out.length > MAX_ACCOUNTS) out = out.slice(out.length - MAX_ACCOUNTS);
+    return out;
 }
 
 function accountLabel(id) {
@@ -77,7 +95,13 @@ function loadAccounts() {
             } catch (e) { /* 参数损坏，返回空列表 */ }
         }
     }
-    return list;
+    // 自愈：合并同账号重复项 + 只留最近 2 个，变化了就写回存量
+    const cleaned = dedupeAccounts(list);
+    if (cleaned.length !== list.length) {
+        saveAccounts(cleaned);
+        console.log(`账号列表已清理：${list.length} → ${cleaned.length} 个`);
+    }
+    return cleaned;
 }
 
 function saveAccounts(list) {
@@ -93,9 +117,9 @@ function captureParams() {
             headers: normalizeHeaderNameMap($request.headers || {})
         };
         const id = accountIdOf(capture);
-        let list = loadAccounts();
-        const idx = list.findIndex(c => accountIdOf(c) === id);
-        if (idx >= 0) list[idx] = capture; else list.push(capture);
+        let list = loadAccounts().filter(c => accountIdOf(c) !== id);
+        list.push(capture); // 移到末尾 = 最近抓到，配合 MAX_ACCOUNTS 保留策略
+        list = dedupeAccounts(list);
         saveAccounts(list);
         $.setdata(JSON.stringify(capture), ckKey); // 保持最新一份兼容
         $.msg($.name, '✅ 参数获取成功', `账号 ${accountLabel(id)} 已保存，当前共 ${list.length} 个账号`);
