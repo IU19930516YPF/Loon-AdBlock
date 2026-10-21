@@ -1,4 +1,4 @@
-// 不背单词 大会员/装备/酷币 本地改写 v1.0.1（2026-10-21，豆包维护）
+// 不背单词 大会员/装备/酷币 本地改写 v1.0.2（2026-10-21，豆包维护）
 // 依据用户真机抓包：权益由 learnywhere.cn 的 bb-user-category 接口下发，App 本地判定。
 // - bb-user-category：9 个权益字段（bbvip + 8 个装备）全部改终身 VIP（不动 category 考试分类）
 //   字段形状依据 App 自家 H5 代码：type 用 "svip"（终身档），到期字段是 expire_date（日期串），不是旧社区脚本的 expire_time
@@ -28,10 +28,17 @@ try {
         }
       }
 
-      // 2) 购买页：显示已购买 + 酷币余额
-      if (/bbvip\/purchase/.test(url)) {
-        if ("purchased" in db) { db.purchased = 1; changed = true; }
-        if (db.product && typeof db.product === "object" && "purchased" in db.product) { db.product.purchased = 1; changed = true; }
+      // 2) 购买页（bbvip/purchase、gear/purchase 通用）：所有 purchased 标志置 1 + 酷币余额显示
+      if (/\/buy\/common\/bb\//.test(url)) {
+        const markPurchased = (o) => {
+          if (!o || typeof o !== "object") return;
+          if (Array.isArray(o)) { o.forEach(markPurchased); return; }
+          for (const k of Object.keys(o)) {
+            if (k === "purchased") { o[k] = 1; changed = true; }
+            else if (typeof o[k] === "object") markPurchased(o[k]);
+          }
+        };
+        markPurchased(db);
         if (db.purchase && typeof db.purchase === "object") {
           if ("coin_remain" in db.purchase) db.purchase.coin_remain = COIN;
           if ("coin_available" in db.purchase) db.purchase.coin_available = COIN;
