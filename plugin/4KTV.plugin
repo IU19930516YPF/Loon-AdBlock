@@ -1,0 +1,11 @@
+#!name=4K影视本地改写
+#!desc=v1.0.0：个人中心显示改写（永久VIP徽章/余额999999/金币888888）+ 播放页去前贴广告、隐藏会员横幅。仅本地生效：4K地址由服务器按真实会员下发（普通会员只给1080p），假余额无法真实消费。
+#!author=Muse（豆包维护）
+#!homepage=https://www.4kvm.top
+
+[Script]
+4K影视个人中心 = type=http-response, pattern=^https?:\/\/.*4kvm\.(top|site|net)\/profile, requires-body=1, max-size=1048576, script-path=https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/script/4ktv.js
+4K影视播放页 = type=http-response, pattern=^https?:\/\/.*4kvm\.(top|site|net)\/play\/, requires-body=1, max-size=1048576, script-path=https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/script/4ktv.js
+
+[MITM]
+hostname = %APPEND% *.4kvm.top, *.4kvm.site, *.4kvm.net
