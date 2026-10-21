@@ -1,19 +1,21 @@
 /*
 @Name：PingMe 自动化签到+视频奖励（优化版）
-@Version：1.1.0（2026-10-21）
+@Version：1.2.0（2026-10-21，新增多账号支持）
 @Repo：https://github.com/IU19930516YPF/Loon-AdBlock（script/PingMeSignin.js）
 @Author：原版 fmz200/奶思（基于 ZenmoFeiShi 版）；优化维护：豆包
 @优化点：
   1. 每个请求显式 30 秒超时 + 最多 3 次重试（间隔 3s/6s 递增）——原版无超时无重试，
      Loon 默认约 5 秒超时，节点一抖第一个请求就整单失败（2026-10-21 实测 5.542 秒超时失败）。
-  2. 抓参并入同一脚本：http-request 模式自动存参（key 与原版一致 pingme_capture_v3），
-     不再依赖 get_cookie.js，参数每次打开 App 自动刷新、不过期。
-  3. 修复原版早退 bug：参数缺失/损坏时通知后直接终止，不再继续执行二次报错。
-  4. 参数失效（retcode!=0）在第一步就识别并单独通知「请重新打开 App 抓参」，不再把 5 个视频全刷一遍错误。
-  5. 通知带每步结果 + 本次收益（最新余额与运行前余额差值）。
+  2. 抓参并入同一脚本：http-request 模式自动存参，不再依赖 get_cookie.js，
+     参数每次打开 App 自动刷新、不过期。
+  3. 多账号（v1.2.0）：抓参按账号标识去重存成列表，双开两个 PingMe 各打开一次即存下两个账号；
+     cron 挨个账号签到+视频奖励，最后合并一条通知（单账号参数 pingme_capture_v3 继续兼容）。
+  4. 修复原版早退 bug：参数缺失/损坏时通知后直接终止，不再继续执行二次报错。
+  5. 参数失效（retcode!=0）在第一步就识别，合并通知里单独标注该账号请重新打开 App 抓参，不影响其他账号。
+  6. 通知带每步结果 + 本次收益（最新余额与运行前余额差值）。
 
 ============Loon 插件============
-订阅本插件后：打开 PingMe App 一次即自动抓参；cron 每天 08:30、20:30 自动签到+视频奖励。
+订阅本插件后：每个 PingMe 账号各打开 App 一次即自动抓参；cron 每天 08:30、20:30 自动全部签到。
 [MITM] hostname = api.pingmeapp.net
 */
 
@@ -23,7 +25,8 @@ const isNode = $.isNode();
 const notify = (() => { try { return isNode ? require('../qinglong/sendNotify') : ''; } catch (e) { return ''; } })();
 $.nodeNotifyMsg = []; // nodeJS合并通知（保留原版变量）
 
-const ckKey = 'pingme_capture_v3';
+const ckKey = 'pingme_capture_v3';      // 最新一次抓到的参数（兼容原版单账号）
+const ckListKey = 'pingme_accounts_v1'; // 多账号参数列表（v1.2.0 新增）
 const SECRET = '0fOiukQq7jXZV2GRi9LGlO';
 const MAX_VIDEO = 5;
 const VIDEO_DELAY = 8000;
@@ -41,7 +44,47 @@ if (isRequestMode) {
         .catch(e => { console.log('未捕获异常：' + (e && e.stack ? e.stack : e)); $.done(); });
 }
 
-// http-request 模式：抓取并保存签到参数（结构与 fmz200 get_cookie.js 完全一致，老参数互通）
+// 账号标识：优先用参数里的 uid 类字段，其次用 Authorization 头，最后用全参数串兜底
+function accountIdOf(capture) {
+    const p = (capture && capture.paramsRaw) || {};
+    const h = (capture && capture.headers) || {};
+    const uid = p.uid || p.userId || p.user_id || p.userid || '';
+    if (uid) return 'uid:' + uid;
+    const auth = h['Authorization'] || h['authorization'] || '';
+    if (auth) return 'auth:' + auth;
+    const rest = Object.keys(p).filter(k => k !== 'sign' && k !== 'signDate').sort().map(k => `${k}=${p[k]}`).join('&');
+    return 'raw:' + MD5(rest);
+}
+
+function accountLabel(id) {
+    if (id.indexOf('uid:') === 0) return 'uid ' + id.slice(4);
+    if (id.indexOf('auth:') === 0) return '授权 …' + id.slice(-4);
+    return '账号 …' + id.slice(-4);
+}
+
+function loadAccounts() {
+    let list = [];
+    try { list = JSON.parse($.getdata(ckListKey) || '[]'); } catch (e) { list = []; }
+    if (!Array.isArray(list)) list = [];
+    list = list.filter(c => c && c.paramsRaw);
+    if (!list.length) {
+        // 兼容原版单账号参数（老用户已抓的那一份）
+        const raw = isNode ? process.env[ckKey] : $.getdata(ckKey);
+        if (raw) {
+            try {
+                const one = JSON.parse(raw);
+                if (one && one.paramsRaw) list = [one];
+            } catch (e) { /* 参数损坏，返回空列表 */ }
+        }
+    }
+    return list;
+}
+
+function saveAccounts(list) {
+    $.setdata(JSON.stringify(list), ckListKey);
+}
+
+// http-request 模式：抓取并保存签到参数（按账号去重，多账号共存）
 function captureParams() {
     try {
         const capture = {
@@ -49,9 +92,14 @@ function captureParams() {
             paramsRaw: parseRawQuery($request.url),
             headers: normalizeHeaderNameMap($request.headers || {})
         };
-        $.setdata(JSON.stringify(capture), ckKey);
-        $.msg($.name, '✅ 参数获取成功', '签到参数已更新，cron 将自动使用最新参数');
-        console.log('PingMe 参数已更新：' + $request.url);
+        const id = accountIdOf(capture);
+        let list = loadAccounts();
+        const idx = list.findIndex(c => accountIdOf(c) === id);
+        if (idx >= 0) list[idx] = capture; else list.push(capture);
+        saveAccounts(list);
+        $.setdata(JSON.stringify(capture), ckKey); // 保持最新一份兼容
+        $.msg($.name, '✅ 参数获取成功', `账号 ${accountLabel(id)} 已保存，当前共 ${list.length} 个账号`);
+        console.log(`PingMe 参数已更新：${id}，共 ${list.length} 个账号`);
     } catch (e) {
         console.log('PingMe 抓参失败：' + e);
     }
@@ -60,19 +108,30 @@ function captureParams() {
 
 async function startTasks() {
     console.log("开始运行签到");
-    const raw = isNode ? process.env[ckKey] : $.getdata(ckKey);
-    if (!raw) {
-        await sendMsg('❌ 未抓到参数', '请先打开 PingMe App 触发一次（插件会自动抓参）');
+    const accounts = loadAccounts();
+    if (!accounts.length) {
+        await sendMsg('❌ 未抓到参数', '请先打开 PingMe App 触发一次（插件会自动抓参）；双开的两个账号要各打开一次');
         return;
     }
-    let capture;
-    try {
-        capture = JSON.parse(raw);
-    } catch (e) {
-        await sendMsg('❌ 参数损坏', '请打开 PingMe App 再触发一次重新抓参');
-        return;
+    console.log(`共 ${accounts.length} 个账号，逐个执行`);
+
+    const sections = [];
+    let okCount = 0;
+    for (let i = 0; i < accounts.length; i++) {
+        const capture = accounts[i];
+        const label = `账号${i + 1}（${accountLabel(accountIdOf(capture))}）`;
+        const r = await runOneAccount(capture);
+        if (r.ok) okCount++;
+        sections.push(`—— ${label} ——\n` + r.lines.join('\n'));
+        if (i < accounts.length - 1) await $.wait(2000);
     }
 
+    const title = okCount === accounts.length ? `🎉 任务完成（${accounts.length} 个账号）` : `⚠️ 部分完成（${okCount}/${accounts.length} 个账号）`;
+    await sendMsg(title, sections.join('\n\n'));
+}
+
+// 单个账号的完整流程，返回 {ok, lines}
+async function runOneAccount(capture) {
     console.log("组装请求头");
     const headers = buildHeaders(capture);
 
@@ -102,12 +161,12 @@ async function startTasks() {
             before = d.result.balance;
             lines.push(`💰 运行前余额：${before} Coins`);
         } else {
-            await sendMsg('❌ 参数可能已失效', `查询余额返回：${d.retmsg || ('retcode=' + d.retcode)}\n请打开 PingMe App 触发一次重新抓参`);
-            return;
+            lines.push(`❌ 参数可能已失效：${d.retmsg || ('retcode=' + d.retcode)}，请打开该账号的 PingMe 重新抓参`);
+            return { ok: false, lines };
         }
     } catch (e) {
-        await sendMsg('❌ 任务失败', e.message);
-        return;
+        lines.push(`❌ ${e.message}`);
+        return { ok: false, lines };
     }
 
     // 2. 签到
@@ -150,7 +209,7 @@ async function startTasks() {
         console.log('查询最新余额失败：' + e.message);
     }
 
-    await sendMsg('🎉 任务完成', lines.join('\n'));
+    return { ok: true, lines };
 }
 
 async function sendMsg(titleSuffix, desc) {
