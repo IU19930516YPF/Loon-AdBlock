@@ -1,10 +1,10 @@
 #!name=X去广告
-#!desc=v1.0.0：过滤 X 时间线推广推文（promotedMetadata 实证字段，覆盖主页/搜索/个人页/回复页/沉浸媒体）+ Who to follow、社区推荐等推荐模块（按 entryId 前缀过滤，移除明细打 [XAds] 日志待真机校准）。仅本地过滤服务器下发内容，不改账号数据。抓包（2026-10-22）只含网页版启动流量、无时间线正文，字段依据为 limbopro/Adblock4limbo 现行规则与 cantwork/Loon 脚本两处实证。
+#!desc=v1.0.1：匹配收窄到时间线类接口（Home/Search/TweetDetail/User 等，其他 GraphQL 不碰）+ 脚本安全网（摘除比例异常整份放行）。v1.0.0：过滤 X 时间线推广推文（promotedMetadata 实证字段）+ Who to follow、社区推荐等推荐模块（entryId 前缀过滤，[XAds] 日志记录明细）。仅本地过滤服务器下发内容，不改账号数据。
 #!author=Muse（豆包维护）
 #!homepage=https://x.com
 
 [Script]
-http-response ^https?:\/\/((api\.(x|twitter)\.com)\/graphql\/|(x\.com)\/i\/api\/graphql\/) script-path=https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/script/xads.js?v=1.0.0, requires-body=true, max-size=10485760, tag=X去广告, enable=true
+http-response ^https?:\/\/((api\.(x|twitter)\.com)\/graphql\/[A-Za-z0-9_-]+\/(HomeTimeline|HomeLatestTimeline|SearchTimeline|TweetDetail|UserTweets|UserTweetsAndReplies|UserMedia|UserLikes|Likes|Bookmarks|ListLatestTweetsTimeline|ImmersiveMedia|ProfileTimeline)|(x\.com)\/i\/api\/graphql\/[A-Za-z0-9_-]+\/(HomeTimeline|HomeLatestTimeline|SearchTimeline|TweetDetail)) script-path=https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/script/xads.js?v=1.0.1, requires-body=true, max-size=10485760, tag=X去广告, enable=true
 
 [MITM]
 hostname = api.x.com, api.twitter.com, x.com
