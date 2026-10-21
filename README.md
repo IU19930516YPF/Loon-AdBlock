@@ -30,6 +30,7 @@ PUBG / HSBC专用 / wise专用 / PayPal_美国专用），未命中的流量走�
 | `plugin/XimalayaAdBlock.plugin` | 喜马拉雅去广告完整版（含 3 条接口复写，需 MITM） | 配置 → 插件 → 右上角 + → 从链接导入 |
 | `plugin/JDAdBlock.lpx` | 京东去广告 v2（适配 15.9.50+，需 MITM） | 配置 → 插件 → 右上角 + → 从链接导入 |
 | `plugin/NeteaseMusicAdBlock.lpx` | 网易云音乐去广告 v2（适配 9.5.x，需 MITM） | 配置 → 插件 → 右上角 + → 从链接导入 |
+| `plugin/PingMe.plugin` | **PingMe 自动签到**（自有优化版 v1.1.0）：签到+视频奖励，30 秒超时+失败重试 3 次，抓参一体；脚本 `script/PingMeSignin.js`（基于 fmz200/奶思 版优化） | 配置 → 插件 → 右上角 + → 从链接导入 |
 
 分开导入链接（raw）：
 
@@ -44,6 +45,7 @@ https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/plugin/Virtual
 https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/plugin/XimalayaAdBlock.plugin
 https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/plugin/JDAdBlock.lpx
 https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/plugin/NeteaseMusicAdBlock.lpx
+https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/plugin/PingMe.plugin
 ```
 
 ## 新增来源（2026-10-16）
