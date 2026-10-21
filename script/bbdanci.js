@@ -1,11 +1,12 @@
-// 不背单词 大会员/装备/酷币 本地改写 v1.0.0（2026-10-21，豆包维护）
+// 不背单词 大会员/装备/酷币 本地改写 v1.0.1（2026-10-21，豆包维护）
 // 依据用户真机抓包：权益由 learnywhere.cn 的 bb-user-category 接口下发，App 本地判定。
 // - bb-user-category：9 个权益字段（bbvip + 8 个装备）全部改终身 VIP（不动 category 考试分类）
+//   字段形状依据 App 自家 H5 代码：type 用 "svip"（终身档），到期字段是 expire_date（日期串），不是旧社区脚本的 expire_time
 // - bbvip/purchase：购买页显示已购 + 酷币余额显示（服务器记账，真消费仍按真实余额校验）
 // - coin-records：酷币明细页余额显示
 // 其余响应原样放行；任何异常都原样放行，绝不弄坏 App。
 
-const VIP = { type: "vip", is_lifetime: 1, expire_time: 4102415999000, end_time: 4102415999000 };
+const VIP = { type: "svip", expire_date: "2099-12-31", is_lifetime: 1, expire_time: 4102415999000, end_time: 4102415999000 };
 const COIN = 999999;
 
 try {
