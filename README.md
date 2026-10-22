@@ -31,7 +31,8 @@ PUBG / HSBC专用 / wise专用 / PayPal_美国专用），未命中的流量走�
 | `plugin/JDAdBlock.lpx` | 京东去广告 v2（适配 15.9.50+，需 MITM） | 配置 → 插件 → 右上角 + → 从链接导入 |
 | `plugin/NeteaseMusicAdBlock.lpx` | 网易云音乐去广告 v2（适配 9.5.x，需 MITM） | 配置 → 插件 → 右上角 + → 从链接导入 |
 | `plugin/PingMe.plugin` | **PingMe 自动签到**（自有优化版 v1.2.1）：多账号签到+视频奖励，30 秒超时+失败重试 3 次，抓参一体；脚本 `script/PingMeSignin.js`（基于 fmz200/奶思 版优化） | 配置 → 插件 → 右上角 + → 从链接导入 |
-| `plugin/4KTV.plugin` | **4K影视本地改写**（自有 v1.0.0）：个人中心显示改写（VIP徽章/余额/金币）+ 播放页去前贴广告；脚本 `script/4ktv.js`。仅本地生效，4K 画质由服务器按真实会员下发 | 配置 → 插件 → 右上角 + → 从链接导入 |
+
+> 会员本地改写类插件（喜马拉雅 / 不背单词 / 4K影视 / HelloTalk）已于 2026-10-22 迁至独立仓库 [Loon-VIP](https://github.com/IU19930516YPF/Loon-VIP)，本仓库只放去广告与签到类。
 
 分开导入链接（raw）：
 
@@ -47,7 +48,6 @@ https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/plugin/Ximalay
 https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/plugin/JDAdBlock.lpx
 https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/plugin/NeteaseMusicAdBlock.lpx
 https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/plugin/PingMe.plugin
-https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/plugin/4KTV.plugin
 ```
 
 ## 新增来源（2026-10-16）
