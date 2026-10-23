@@ -1,5 +1,5 @@
 # 本文件来源: https://github.com/217heidai/adblockfilters (rules/adblockloonlite.list，去广告合并规则 Lite 版)
-# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 1/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-22）
+# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 1/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-23）
 # 上游: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloonlite.list
 
 DOMAIN-SUFFIX,kwflvcdn.000dn.com
@@ -116,6 +116,7 @@ DOMAIN-SUFFIX,ent1.12584.cn
 DOMAIN-SUFFIX,126.cn
 DOMAIN-SUFFIX,analytics.126.com
 DOMAIN-SUFFIX,ir.mail.126.com
+DOMAIN-SUFFIX,admusicpic.music.126.net
 DOMAIN-SUFFIX,ads.music.126.net
 DOMAIN-SUFFIX,api-sentry.ws.126.net
 DOMAIN-SUFFIX,iadmusicmat.music.126.net
@@ -489,6 +490,7 @@ DOMAIN-SUFFIX,3q9j4w2r9d.com
 DOMAIN-SUFFIX,3qtdjf4830.com
 DOMAIN-SUFFIX,3qx0pnhyzi.com
 DOMAIN-SUFFIX,3rc04o1rmy.com
+DOMAIN-SUFFIX,3rev8wh22y.com
 DOMAIN-SUFFIX,3rs337ci4.com
 DOMAIN-SUFFIX,3s7m2ss7g.com
 DOMAIN-SUFFIX,img.3sjt.com
@@ -1022,6 +1024,7 @@ DOMAIN-SUFFIX,9ics.cn
 DOMAIN-SUFFIX,9j9gc694o4.com
 DOMAIN-SUFFIX,9jk7puqza.com
 DOMAIN-SUFFIX,9k.com
+DOMAIN-SUFFIX,9kos5nsw7.com
 DOMAIN-SUFFIX,9kqh3r24zv.com
 DOMAIN-SUFFIX,9ma1sr1tb1.com
 DOMAIN-SUFFIX,9mdg9cu59.com
@@ -2074,7 +2077,6 @@ DOMAIN-SUFFIX,bd1.click.com.cn
 DOMAIN-SUFFIX,clicki.cn
 DOMAIN-SUFFIX,clo41zgrs.com
 DOMAIN-SUFFIX,appsentry-eu-ali.closeli.com
-DOMAIN-SUFFIX,7xi9g1.com1.z0.glb.clouddn.com
 DOMAIN-SUFFIX,bkt.clouddn.com
 DOMAIN-SUFFIX,advertise.cloudlinks.cn
 DOMAIN-SUFFIX,cloudtask.cn
@@ -2468,8 +2470,8 @@ DOMAIN-SUFFIX,crash.rnote.com.eo.dnse0.com
 DOMAIN-SUFFIX,zhihu-web-analytics.zhihu.com.eo.dnse0.com
 DOMAIN-SUFFIX,metrics-picture.dreport.meituan.net.eo.dnse1.com
 DOMAIN-SUFFIX,tracking.ksztone.com.eo.dnse2.com
+DOMAIN-SUFFIX,posthog.casinoplus.top.eo.dnse3.com
 DOMAIN-SUFFIX,akamai-apigateway-gio-analytics.tesla.cn.eo.dnse4.com
-DOMAIN-SUFFIX,ads-vp5-xhscdn.tliveapp.com.cdn.dnsv1.com
 DOMAIN-SUFFIX,beacon.cdn.qq.com.cdn.dnsv1.com
 DOMAIN-SUFFIX,dnyzbp.cn
 DOMAIN-SUFFIX,do-global.com
@@ -2804,7 +2806,6 @@ DOMAIN-SUFFIX,hugelog.fcbox.com
 DOMAIN-SUFFIX,fclksuxbae.icu
 DOMAIN-SUFFIX,fco896oi39.com
 DOMAIN-SUFFIX,fd6s5sa7ji.com
-DOMAIN-SUFFIX,fdhvczd.cn
 DOMAIN-SUFFIX,fdi1rg6ihs.com
 DOMAIN-SUFFIX,fdk6z2l7jt.com
 DOMAIN-SUFFIX,fe7xxmtg3.com
@@ -2846,3 +2847,13 @@ DOMAIN-SUFFIX,fi0e0xtinp.com
 DOMAIN-SUFFIX,fighter-shop.shop
 DOMAIN-SUFFIX,fikppvmul.com
 DOMAIN-SUFFIX,fileh.xyz
+DOMAIN-SUFFIX,filei.top
+DOMAIN-SUFFIX,fileshider.com
+DOMAIN-SUFFIX,fillbpi.com
+DOMAIN-SUFFIX,spatial.fineboost.com
+DOMAIN-SUFFIX,api.firwinds.site
+DOMAIN-SUFFIX,fiwyjar.cn
+DOMAIN-SUFFIX,fjalsr83a6.com
+DOMAIN-SUFFIX,fjpopxgyfrlxvc.com
+DOMAIN-SUFFIX,fjsytjs.cn
+DOMAIN-SUFFIX,fjtroip.cn
