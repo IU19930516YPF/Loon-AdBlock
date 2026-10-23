@@ -1,7 +1,11 @@
 # 本文件来源: https://github.com/217heidai/adblockfilters (rules/adblockloonlite.list，去广告合并规则 Lite 版)
-# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 3/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-22）
+# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 3/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-23）
 # 上游: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloonlite.list
 
+DOMAIN-SUFFIX,kuaibao.qq.com
+DOMAIN-SUFFIX,l.qq.com
+DOMAIN-SUFFIX,lcsdk.3g.qq.com
+DOMAIN-SUFFIX,log.tbs.qq.com
 DOMAIN-SUFFIX,log.weixin.qq.com
 DOMAIN-SUFFIX,log.wtlogin.qq.com
 DOMAIN-SUFFIX,log1.wtlogin.qq.com
@@ -407,6 +411,7 @@ DOMAIN-SUFFIX,pmap.sandai.net
 DOMAIN-SUFFIX,images.edm.sangfor.cn
 DOMAIN-SUFFIX,active.sangfor.com
 DOMAIN-SUFFIX,sanghuangvip.com
+DOMAIN-SUFFIX,ta.sanook.com
 DOMAIN-SUFFIX,dm.sanwen.net
 DOMAIN-SUFFIX,saxysec.com
 DOMAIN-SUFFIX,sbird.xyz
@@ -602,6 +607,7 @@ DOMAIN-SUFFIX,log-hl.snssdk.com
 DOMAIN-SUFFIX,log-lf.snssdk.com
 DOMAIN-SUFFIX,log-lq.snssdk.com
 DOMAIN-SUFFIX,mcs.snssdk.com
+DOMAIN-SUFFIX,mercury-sdk.snssdk.com
 DOMAIN-SUFFIX,mon.snssdk.com
 DOMAIN-SUFFIX,mssdk.snssdk.com
 DOMAIN-SUFFIX,open.snssdk.com
@@ -709,7 +715,6 @@ DOMAIN-SUFFIX,sssxwsry.com
 DOMAIN-SUFFIX,ssur.cc
 DOMAIN-SUFFIX,ssyegkbu0g.com
 DOMAIN-SUFFIX,stanlybottle.shop
-DOMAIN-SUFFIX,uaaooa.stansberryresearch.com
 DOMAIN-SUFFIX,star8.net
 DOMAIN-SUFFIX,event-api-cs.stardust-tv.com
 DOMAIN-SUFFIX,sensorsdata-datasink.stardust-tv.com
@@ -906,6 +911,7 @@ DOMAIN-SUFFIX,tapdb.com
 DOMAIN-SUFFIX,tapdb.net
 DOMAIN-SUFFIX,tapjoy.cn
 DOMAIN-SUFFIX,sentry.tapsvc.com
+DOMAIN-SUFFIX,crash.taptap.com
 DOMAIN-SUFFIX,tasgxk4ia6.com
 DOMAIN-SUFFIX,tawjmkk1p6.com
 DOMAIN-SUFFIX,tb1mdkeni.com
@@ -1180,6 +1186,7 @@ DOMAIN-SUFFIX,gjtrack.uc.cn
 DOMAIN-SUFFIX,h-adashx.ut.uc.cn
 DOMAIN-SUFFIX,mparticle.uc.cn
 DOMAIN-SUFFIX,s-adashx.ut.uc.cn
+DOMAIN-SUFFIX,t.uc.cn
 DOMAIN-SUFFIX,track.uc.cn
 DOMAIN-SUFFIX,woodpecker.uc.cn
 DOMAIN-SUFFIX,u.uc123.com
@@ -1240,6 +1247,7 @@ DOMAIN-SUFFIX,ukgm0qily.com
 DOMAIN-SUFFIX,uks8suop4b.com
 DOMAIN-SUFFIX,ukwtsegym.com
 DOMAIN-SUFFIX,ulk8je1fv9.com
+DOMAIN-SUFFIX,ulmmoq87xp.com
 DOMAIN-SUFFIX,ulpsd9qmja.com
 DOMAIN-SUFFIX,ultrapay.net
 DOMAIN-SUFFIX,ulwzinqlh0.com
@@ -1711,7 +1719,6 @@ DOMAIN-SUFFIX,ggw.watertu.com
 DOMAIN-SUFFIX,bd.watu.cn
 DOMAIN-SUFFIX,logs.wayagame.com
 DOMAIN-SUFFIX,wayrates.com
-DOMAIN-SUFFIX,wbesryx.cn
 DOMAIN-SUFFIX,wbkar038r.com
 DOMAIN-SUFFIX,wbmbr16tt.com
 DOMAIN-SUFFIX,wbofo915y.com
@@ -1794,6 +1801,7 @@ DOMAIN-SUFFIX,wiyun.com
 DOMAIN-SUFFIX,wizoevljj.com
 DOMAIN-SUFFIX,wj8i1rlp2b.com
 DOMAIN-SUFFIX,static.wjxcdn.com
+DOMAIN-SUFFIX,h1.wk2.com
 DOMAIN-SUFFIX,wk5fo6pyf.com
 DOMAIN-SUFFIX,wk70ccjk1a.com
 DOMAIN-SUFFIX,wkanx.com
@@ -2042,6 +2050,7 @@ DOMAIN-SUFFIX,ru.video.intl.xiaomi.com
 DOMAIN-SUFFIX,stat.pandora.xiaomi.com
 DOMAIN-SUFFIX,stats.music.xiaomi.com
 DOMAIN-SUFFIX,sys.tv.india.xiaomi.com
+DOMAIN-SUFFIX,t1.a.market.xiaomi.com
 DOMAIN-SUFFIX,t17.market.xiaomi.com
 DOMAIN-SUFFIX,tv.weixin.pandora.xiaomi.com
 DOMAIN-SUFFIX,tvepg.pandora.xiaomi.com
@@ -2290,10 +2299,12 @@ DOMAIN-SUFFIX,yihubaiying.com
 DOMAIN-SUFFIX,yijfdsu.cn
 DOMAIN-SUFFIX,yijifen.com
 DOMAIN-SUFFIX,yijirecovery.com
+DOMAIN-SUFFIX,fg.yilianqing.com
 DOMAIN-SUFFIX,yinghuadongman.hl.cn
 DOMAIN-SUFFIX,yingkebao.top
 DOMAIN-SUFFIX,data-track.yingxiong.com
 DOMAIN-SUFFIX,data-track-global.yingxiong.com
+DOMAIN-SUFFIX,sentry2-pan01.yingxiong.com
 DOMAIN-SUFFIX,yingyankantu.com
 DOMAIN-SUFFIX,log.yinshantech.cn
 DOMAIN-SUFFIX,analytics.yinxiang.com
@@ -2685,8 +2696,8 @@ DOMAIN-SUFFIX,stat.zol.com.cn
 DOMAIN-SUFFIX,ydjs.zol.com.cn
 DOMAIN-SUFFIX,zolcot122t.com
 DOMAIN-SUFFIX,adm.zookingsoft.com
+DOMAIN-SUFFIX,zoologist00.com
 DOMAIN-SUFFIX,zoosnet.net
-DOMAIN-SUFFIX,zoossoft.cn
 DOMAIN-SUFFIX,zoossoft.net
 DOMAIN-SUFFIX,sentry.zouliangbu.com
 DOMAIN-SUFFIX,zowralr.cn
