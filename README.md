@@ -61,7 +61,7 @@ https://raw.githubusercontent.com/IU19930516YPF/Loon-AdBlock/main/plugin/PingMe.
 
 ## 上游来源
 
-- 规则基于 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) 的 `rule/Loon/Advertising/Advertising.list`（上游更新 2026-10-20）
+- 规则基于 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) 的 `rule/Loon/Advertising/Advertising.list`（上游更新 2026-10-24）
 - 插件基于同仓库的 `rewrite/Loon/AdvertisingScript/AdvertisingScript.plugin`（上游更新 2025-06-06）
 - 强力版插件另含同仓库的 `rewrite/Loon/Advertising/Advertising.plugin`（上游更新 2025-08-26，740 条 rewrite 拦截）
 - 除下述番茄/红果处理外，其余内容与上游原版一致
