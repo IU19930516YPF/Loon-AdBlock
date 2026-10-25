@@ -1,7 +1,11 @@
 # 本文件来源: https://github.com/217heidai/adblockfilters (rules/adblockloonlite.list，去广告合并规则 Lite 版)
-# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 3/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-24）
+# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 3/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-25）
 # 上游: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloonlite.list
 
+DOMAIN-SUFFIX,fusion.qq.com
+DOMAIN-SUFFIX,fw.qq.com
+DOMAIN-SUFFIX,gatherer.m.qq.com
+DOMAIN-SUFFIX,gdt.qq.com
 DOMAIN-SUFFIX,hd2.3g.qq.com
 DOMAIN-SUFFIX,hq-tracking.qq.com
 DOMAIN-SUFFIX,httpdns.kg.qq.com
@@ -230,8 +234,6 @@ DOMAIN-SUFFIX,v9-reading-ad.qznovelvod.com
 DOMAIN-SUFFIX,v95-aw-reading-ad.qznovelvod.com
 DOMAIN-SUFFIX,v95-se-zjwztc-reading-ad.qznovelvod.com
 DOMAIN-SUFFIX,v95-ynkmtc-reading-ad.qznovelvod.com
-DOMAIN-SUFFIX,v95-zjjx2tc-reading-ad.qznovelvod.com
-DOMAIN-SUFFIX,v96-reading-ad.qznovelvod.com
 DOMAIN-SUFFIX,qzs43ai3p.com
 DOMAIN-SUFFIX,tc.qzwxrtyk.com
 DOMAIN-SUFFIX,r0d2dzltw7.com
@@ -612,6 +614,7 @@ DOMAIN-SUFFIX,extlog.snssdk.com
 DOMAIN-SUFFIX,gecko.snssdk.com
 DOMAIN-SUFFIX,i.snssdk.com
 DOMAIN-SUFFIX,ib.snssdk.com
+DOMAIN-SUFFIX,ic.snssdk.com
 DOMAIN-SUFFIX,is.snssdk.com
 DOMAIN-SUFFIX,log.snssdk.com
 DOMAIN-SUFFIX,log-hl.snssdk.com
@@ -1027,7 +1030,6 @@ DOMAIN-SUFFIX,a.tiyuxiu.com
 DOMAIN-SUFFIX,tjfskxz0t6.com
 DOMAIN-SUFFIX,tjfytech.com
 DOMAIN-SUFFIX,tjnwfjy.cn
-DOMAIN-SUFFIX,tjsptech.com
 DOMAIN-SUFFIX,tk11rxjhvm.com
 DOMAIN-SUFFIX,tk71mu9u7.com
 DOMAIN-SUFFIX,tkvfayv59.com
@@ -1060,7 +1062,6 @@ DOMAIN-SUFFIX,toponad.net
 DOMAIN-SUFFIX,toppdf.co
 DOMAIN-SUFFIX,topsem.com
 DOMAIN-SUFFIX,static.topxgun.com
-DOMAIN-SUFFIX,touch-moblie.com
 DOMAIN-SUFFIX,sentry.touchchat.me
 DOMAIN-SUFFIX,touclick.com
 DOMAIN-SUFFIX,toushibao.com
@@ -1554,7 +1555,6 @@ DOMAIN-SUFFIX,kz-vcode-api.vivoglobal.com
 DOMAIN-SUFFIX,kz-vcode-od.vivoglobal.com
 DOMAIN-SUFFIX,kz-vcode-or.vivoglobal.com
 DOMAIN-SUFFIX,mx-album-api.vivoglobal.com
-DOMAIN-SUFFIX,mx-cota.vivoglobal.com
 DOMAIN-SUFFIX,mx-domaincfg.vivoglobal.com
 DOMAIN-SUFFIX,mx-err-up.vivoglobal.com
 DOMAIN-SUFFIX,mx-onrt-stsdk.vivoglobal.com
@@ -1679,6 +1679,7 @@ DOMAIN-SUFFIX,vwowvu9ha.com
 DOMAIN-SUFFIX,vwtbrzymoz.com
 DOMAIN-SUFFIX,vx2tbw9xin.com
 DOMAIN-SUFFIX,vxhsj.cn
+DOMAIN-SUFFIX,vyq5segjv.com
 DOMAIN-SUFFIX,vysr4o0eg.com
 DOMAIN-SUFFIX,vytf0mqa0.com
 DOMAIN-SUFFIX,vyye.cn
@@ -2116,7 +2117,6 @@ DOMAIN-SUFFIX,sentry.xindong.com
 DOMAIN-SUFFIX,ichc1.xinglinpukang.com
 DOMAIN-SUFFIX,a2.xinhuanet.com
 DOMAIN-SUFFIX,xinlimaoyi2.xinlimaoyi.cn
-DOMAIN-SUFFIX,upaicdn.xinmei365.com
 DOMAIN-SUFFIX,tongji.xinmin.cn
 DOMAIN-SUFFIX,hi.xiunm.cn
 DOMAIN-SUFFIX,xiyouence.com
@@ -2145,21 +2145,25 @@ DOMAIN-SUFFIX,xmgi1tqka.com
 DOMAIN-SUFFIX,xmlsxar.cn
 DOMAIN-SUFFIX,adv.xmmku.com
 DOMAIN-SUFFIX,xmo0oixbx8.com
+DOMAIN-SUFFIX,ad.xmydch.cn
+DOMAIN-SUFFIX,xmywlyh.cn
 DOMAIN-SUFFIX,xn--2qu92fhtxsxexqab.xn--fiqs8s
 DOMAIN-SUFFIX,xn--2qux23cwrdmnaz3gj3w.xn--fiqs8s
+DOMAIN-SUFFIX,xn--2ss830adjbqy7h.xn--fiqs8s
 DOMAIN-SUFFIX,xn--m7r781dz66a.cn
 DOMAIN-SUFFIX,xn--wxtr9fwyxk9c.xn--fiqs8s
 DOMAIN-SUFFIX,xn--wxtr9fwyxk9co4hbua.xn--fiqs8s
+DOMAIN-SUFFIX,xn--zw0autp42d.cn
 DOMAIN-SUFFIX,xnemz1rc5j.com
 DOMAIN-SUFFIX,xnm4x0ali.com
 DOMAIN-SUFFIX,xo2ra1fu7.com
 DOMAIN-SUFFIX,xo60kab7yv.com
+DOMAIN-SUFFIX,xolerkr.cn
 DOMAIN-SUFFIX,xopldz.icu
 DOMAIN-SUFFIX,xoqloz3tk.com
 DOMAIN-SUFFIX,xp308.cn
 DOMAIN-SUFFIX,xpcwrgy.cn
 DOMAIN-SUFFIX,xpdgvlxwn.icu
-DOMAIN-SUFFIX,www.xpdyqax.cn
 DOMAIN-SUFFIX,xqblnei.cn
 DOMAIN-SUFFIX,xqhfb9hzrs.com
 DOMAIN-SUFFIX,xqmd2dzzvh.com
@@ -2389,6 +2393,7 @@ DOMAIN-SUFFIX,player-lg.youku.com
 DOMAIN-SUFFIX,playlog.youku.com
 DOMAIN-SUFFIX,push.m.youku.com
 DOMAIN-SUFFIX,s.p.youku.com
+DOMAIN-SUFFIX,sdk.m.youku.com
 DOMAIN-SUFFIX,stat-common.youku.com
 DOMAIN-SUFFIX,un-acs.youku.com
 DOMAIN-SUFFIX,wan.youku.com
@@ -2685,6 +2690,7 @@ DOMAIN-SUFFIX,zltqrh.icu
 DOMAIN-SUFFIX,zmaticoo.com
 DOMAIN-SUFFIX,zmdesf.cn
 DOMAIN-SUFFIX,zmg15qfvi.com
+DOMAIN-SUFFIX,zmhqhuq.cn
 DOMAIN-SUFFIX,zmjt3xi8k.com
 DOMAIN-SUFFIX,zmk852tp7.com
 DOMAIN-SUFFIX,zmrzis8ow.com
