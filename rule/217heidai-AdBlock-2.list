@@ -1,18 +1,7 @@
 # 本文件来源: https://github.com/217heidai/adblockfilters (rules/adblockloonlite.list，去广告合并规则 Lite 版)
-# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 2/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-25）
+# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 2/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-26）
 # 上游: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloonlite.list
 
-DOMAIN-SUFFIX,datareport.fkw.com
-DOMAIN-SUFFIX,fl0hg5wlr.com
-DOMAIN-SUFFIX,fl4md7mm8.com
-DOMAIN-SUFFIX,fl7i15bxzr.com
-DOMAIN-SUFFIX,flash.cn
-DOMAIN-SUFFIX,flat-ads.com
-DOMAIN-SUFFIX,api.flowsixteen.com
-DOMAIN-SUFFIX,flsfzr.cn
-DOMAIN-SUFFIX,flstudiochina.com
-DOMAIN-SUFFIX,api-flow.flyme.cn
-DOMAIN-SUFFIX,bro.flyme.cn
 DOMAIN-SUFFIX,t-e.flyme.cn
 DOMAIN-SUFFIX,t-flow.flyme.cn
 DOMAIN-SUFFIX,cfgc.flysleep.cn
@@ -467,7 +456,6 @@ DOMAIN-SUFFIX,download.haozip.com
 DOMAIN-SUFFIX,log.dc.cn.happyelements.com
 DOMAIN-SUFFIX,hapying.com
 DOMAIN-SUFFIX,hashnest.com
-DOMAIN-SUFFIX,haveon.shop
 DOMAIN-SUFFIX,a.hbf23.cn
 DOMAIN-SUFFIX,hbiaz6xxya.com
 DOMAIN-SUFFIX,img1.hblds.com
@@ -726,9 +714,7 @@ DOMAIN-SUFFIX,holsat.shop
 DOMAIN-SUFFIX,homeflashsale-eu.shop
 DOMAIN-SUFFIX,log.homestyler.com
 DOMAIN-SUFFIX,homeware-store.shop
-DOMAIN-SUFFIX,homeyoupl.shop
 DOMAIN-SUFFIX,homla.fit
-DOMAIN-SUFFIX,homlaspl.shop
 DOMAIN-SUFFIX,w88.hongkongdisneyland.com.cn
 DOMAIN-SUFFIX,usa01-client-report.honkaiimpact3.com
 DOMAIN-SUFFIX,ads.honor.com
@@ -1679,7 +1665,6 @@ DOMAIN-SUFFIX,ad.data.lianjia.com
 DOMAIN-SUFFIX,dig.lianjia.com
 DOMAIN-SUFFIX,ll-sentry.lianlianpay.com
 DOMAIN-SUFFIX,adimg.liba.com
-DOMAIN-SUFFIX,libaishuo.com
 DOMAIN-SUFFIX,track.libii.cn
 DOMAIN-SUFFIX,lichunxiao.cn
 DOMAIN-SUFFIX,liebaovip.com
@@ -1880,7 +1865,6 @@ DOMAIN-SUFFIX,my-material.zone1.meitudata.com
 DOMAIN-SUFFIX,stat.meitudata.com
 DOMAIN-SUFFIX,xiuxiu.mobile.meitudata.com
 DOMAIN-SUFFIX,meitustat.com
-DOMAIN-SUFFIX,meivoas.shop
 DOMAIN-SUFFIX,api-flow.meizu.com
 DOMAIN-SUFFIX,api-game.meizu.com
 DOMAIN-SUFFIX,api-push.meizu.com
@@ -2149,7 +2133,6 @@ DOMAIN-SUFFIX,adcs-ue.myappsget.com
 DOMAIN-SUFFIX,mycleanmymac.com
 DOMAIN-SUFFIX,sentry.mydramawave.com
 DOMAIN-SUFFIX,icons.mydrivers.com
-DOMAIN-SUFFIX,mygeek.cn
 DOMAIN-SUFFIX,ceshi127722.obs.cn-north-4.myhuaweicloud.com
 DOMAIN-SUFFIX,hmdev.obs.cn-east-2.myhuaweicloud.com
 DOMAIN-SUFFIX,nsp-logservice-hiview-p05-dra.obs.ap-southeast-3.myhuaweicloud.com
@@ -2514,7 +2497,6 @@ DOMAIN-SUFFIX,pe23ekuk9.com
 DOMAIN-SUFFIX,a8.jp.peacebird.com
 DOMAIN-SUFFIX,eloqua.pearsonvue.com.cn
 DOMAIN-SUFFIX,ped146qez.com
-DOMAIN-SUFFIX,peiyou.com
 DOMAIN-SUFFIX,pengauto.cn
 DOMAIN-SUFFIX,adver.pengyou.com
 DOMAIN-SUFFIX,penxiangge.com
@@ -2529,7 +2511,6 @@ DOMAIN-SUFFIX,pfk94y5ke.com
 DOMAIN-SUFFIX,pfqwbqs.cn
 DOMAIN-SUFFIX,phbyrmvjn.icu
 DOMAIN-SUFFIX,smetrics.marketing.lighting.philips.com.cn
-DOMAIN-SUFFIX,photozoomchina.com
 DOMAIN-SUFFIX,phr3qfcmb.com
 DOMAIN-SUFFIX,analytics.pictoflux.com
 DOMAIN-SUFFIX,adim.pinduoduo.com
@@ -2546,7 +2527,6 @@ DOMAIN-SUFFIX,bd1.pipaw.com
 DOMAIN-SUFFIX,pitbulllpl.shop
 DOMAIN-SUFFIX,pitbullmens.club
 DOMAIN-SUFFIX,pitbullmensp.shop
-DOMAIN-SUFFIX,pitbullspl.shop
 DOMAIN-SUFFIX,pitbullsportsa.shop
 DOMAIN-SUFFIX,pitbullsportsi.shop
 DOMAIN-SUFFIX,pitbullsportso.shop
@@ -2561,7 +2541,6 @@ DOMAIN-SUFFIX,pkdcfefqqf.com
 DOMAIN-SUFFIX,pkpmhr2gw.com
 DOMAIN-SUFFIX,pkwnpgsex.com
 DOMAIN-SUFFIX,pkytxfiin.com
-DOMAIN-SUFFIX,pl-rituals.club
 DOMAIN-SUFFIX,pl-ritualsbeat.club
 DOMAIN-SUFFIX,pl53l7tyw.com
 DOMAIN-SUFFIX,pl7ncaj0b.com
@@ -2834,3 +2813,10 @@ DOMAIN-SUFFIX,dp3.qq.com
 DOMAIN-SUFFIX,e.qq.com
 DOMAIN-SUFFIX,file.daihuo.qq.com
 DOMAIN-SUFFIX,fodder.qq.com
+DOMAIN-SUFFIX,fusion.qq.com
+DOMAIN-SUFFIX,fw.qq.com
+DOMAIN-SUFFIX,gatherer.m.qq.com
+DOMAIN-SUFFIX,gdt.qq.com
+DOMAIN-SUFFIX,hd2.3g.qq.com
+DOMAIN-SUFFIX,hq-tracking.qq.com
+DOMAIN-SUFFIX,httpdns.kg.qq.com
