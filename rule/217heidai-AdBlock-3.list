@@ -1,14 +1,7 @@
 # 本文件来源: https://github.com/217heidai/adblockfilters (rules/adblockloonlite.list，去广告合并规则 Lite 版)
-# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 3/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-25）
+# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 3/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-26）
 # 上游: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloonlite.list
 
-DOMAIN-SUFFIX,fusion.qq.com
-DOMAIN-SUFFIX,fw.qq.com
-DOMAIN-SUFFIX,gatherer.m.qq.com
-DOMAIN-SUFFIX,gdt.qq.com
-DOMAIN-SUFFIX,hd2.3g.qq.com
-DOMAIN-SUFFIX,hq-tracking.qq.com
-DOMAIN-SUFFIX,httpdns.kg.qq.com
 DOMAIN-SUFFIX,httpring.qq.com
 DOMAIN-SUFFIX,huatuo.qq.com
 DOMAIN-SUFFIX,img.ssl.msdk.qq.com
@@ -1092,7 +1085,6 @@ DOMAIN-SUFFIX,toutiaopage.com
 DOMAIN-SUFFIX,tovppl.cn
 DOMAIN-SUFFIX,tp4d21qek.com
 DOMAIN-SUFFIX,tqbjevhkgw.icu
-DOMAIN-SUFFIX,tr-suwen.shop
 DOMAIN-SUFFIX,tradplus.cn
 DOMAIN-SUFFIX,tradplus.com
 DOMAIN-SUFFIX,tradplusad.com
@@ -1771,7 +1763,6 @@ DOMAIN-SUFFIX,api-z.weidian.com
 DOMAIN-SUFFIX,logtake.weidian.com
 DOMAIN-SUFFIX,weidianyuedu.com
 DOMAIN-SUFFIX,1.weiheshidai.com
-DOMAIN-SUFFIX,statistic.weimobdc.com
 DOMAIN-SUFFIX,badjs.weixinbridge.com
 DOMAIN-SUFFIX,ads.welltalky.cn
 DOMAIN-SUFFIX,code.wenbanzhu.com
@@ -2513,8 +2504,6 @@ DOMAIN-SUFFIX,z9sab7vr0b.com
 DOMAIN-SUFFIX,za5ww9yxg.com
 DOMAIN-SUFFIX,zaixianvip.cn
 DOMAIN-SUFFIX,zakladyboleslawiechome-pl.shop
-DOMAIN-SUFFIX,zakladyboleslawieconsale-pl.shop
-DOMAIN-SUFFIX,zakladyboleslawieczone-pl.shop
 DOMAIN-SUFFIX,zalwlz.icu
 DOMAIN-SUFFIX,zamplus.com
 DOMAIN-SUFFIX,zantainet.com
@@ -2561,7 +2550,6 @@ DOMAIN-SUFFIX,push.zhangyue.com
 DOMAIN-SUFFIX,sys.zhangyue.com
 DOMAIN-SUFFIX,saad.ms.zhangyue.net
 DOMAIN-SUFFIX,smad.ms.zhangyue.net
-DOMAIN-SUFFIX,zhantai.com
 DOMAIN-SUFFIX,zhanzhang.net
 DOMAIN-SUFFIX,www.zhaohainan.cn
 DOMAIN-SUFFIX,mg09.zhaopin.com
