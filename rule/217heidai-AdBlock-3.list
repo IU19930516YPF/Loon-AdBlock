@@ -2,15 +2,6 @@
 # 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 3/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-26）
 # 上游: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloonlite.list
 
-DOMAIN-SUFFIX,httpring.qq.com
-DOMAIN-SUFFIX,huatuo.qq.com
-DOMAIN-SUFFIX,img.ssl.msdk.qq.com
-DOMAIN-SUFFIX,info.3g.qq.com
-DOMAIN-SUFFIX,ipv6.kg.qq.com
-DOMAIN-SUFFIX,iwan-s.video.qq.com
-DOMAIN-SUFFIX,jpush.html5.qq.com
-DOMAIN-SUFFIX,kde.qq.com
-DOMAIN-SUFFIX,kuaibao.qq.com
 DOMAIN-SUFFIX,l.qq.com
 DOMAIN-SUFFIX,lcsdk.3g.qq.com
 DOMAIN-SUFFIX,log.tbs.qq.com
@@ -227,6 +218,8 @@ DOMAIN-SUFFIX,v9-reading-ad.qznovelvod.com
 DOMAIN-SUFFIX,v95-aw-reading-ad.qznovelvod.com
 DOMAIN-SUFFIX,v95-se-zjwztc-reading-ad.qznovelvod.com
 DOMAIN-SUFFIX,v95-ynkmtc-reading-ad.qznovelvod.com
+DOMAIN-SUFFIX,v95-zjjx2tc-reading-ad.qznovelvod.com
+DOMAIN-SUFFIX,v96-reading-ad.qznovelvod.com
 DOMAIN-SUFFIX,qzs43ai3p.com
 DOMAIN-SUFFIX,tc.qzwxrtyk.com
 DOMAIN-SUFFIX,r0d2dzltw7.com
@@ -295,6 +288,7 @@ DOMAIN-SUFFIX,richh.cn
 DOMAIN-SUFFIX,ad.richmob.cn
 DOMAIN-SUFFIX,rio9s1zdpd.com
 DOMAIN-SUFFIX,ritualsbodys.shop
+DOMAIN-SUFFIX,ritualseur.shop
 DOMAIN-SUFFIX,bi-tracker-global.rivergame.net
 DOMAIN-SUFFIX,rk2kpo4ef.com
 DOMAIN-SUFFIX,rkcfmfm97.com
@@ -467,6 +461,7 @@ DOMAIN-SUFFIX,httpdns.n.shifen.com
 DOMAIN-SUFFIX,jpaasne.e.shifen.com
 DOMAIN-SUFFIX,statichf.shihuocdn.cn
 DOMAIN-SUFFIX,shilian168.cn
+DOMAIN-SUFFIX,analysis.shixunsuda.com
 DOMAIN-SUFFIX,ad.shobo.cn
 DOMAIN-SUFFIX,1.shopit.cn
 DOMAIN-SUFFIX,sentry.shoplazza.com
@@ -702,6 +697,7 @@ DOMAIN-SUFFIX,ad.southcn.com
 DOMAIN-SUFFIX,sgg.southcn.com
 DOMAIN-SUFFIX,cod.southmoney.com
 DOMAIN-SUFFIX,app-monitor.spacecape.com
+DOMAIN-SUFFIX,stats.spacematchok.com
 DOMAIN-SUFFIX,experiments.sparanoid.net
 DOMAIN-SUFFIX,specialty75.com
 DOMAIN-SUFFIX,spnuninugr.com
@@ -714,6 +710,7 @@ DOMAIN-SUFFIX,srbzw.cn
 DOMAIN-SUFFIX,srqxnvjdd.com
 DOMAIN-SUFFIX,ss494hpnq.com
 DOMAIN-SUFFIX,ssc9v54oew.com
+DOMAIN-SUFFIX,ssi1gqcx0m.com
 DOMAIN-SUFFIX,data.ssports.com
 DOMAIN-SUFFIX,show.ssports.com
 DOMAIN-SUFFIX,3.ssqzj.com
@@ -763,6 +760,7 @@ DOMAIN-SUFFIX,svi7vnxcv.com
 DOMAIN-SUFFIX,swovtny444.com
 DOMAIN-SUFFIX,sx2sg2t5sd.com
 DOMAIN-SUFFIX,sxk9m8x.cn
+DOMAIN-SUFFIX,sxltfj.cn
 DOMAIN-SUFFIX,sxq9xn7t3.com
 DOMAIN-SUFFIX,sxxjdz.com
 DOMAIN-SUFFIX,sxzl6x4k9p.com
@@ -784,6 +782,7 @@ DOMAIN-SUFFIX,szqwzosxn3.com
 DOMAIN-SUFFIX,sztd75fntp.com
 DOMAIN-SUFFIX,t101.cn
 DOMAIN-SUFFIX,t19olm6fd.com
+DOMAIN-SUFFIX,t1ufw6nz5f.com
 DOMAIN-SUFFIX,t28goe.cn
 DOMAIN-SUFFIX,t298jlqqf.com
 DOMAIN-SUFFIX,t2f3pqd40.com
@@ -934,6 +933,7 @@ DOMAIN-SUFFIX,tracking.tdk.cn
 DOMAIN-SUFFIX,tdlop7tsme.com
 DOMAIN-SUFFIX,log.tec73.com
 DOMAIN-SUFFIX,tongji.techweb.com.cn
+DOMAIN-SUFFIX,tecunonline.com
 DOMAIN-SUFFIX,teddymobile.cn
 DOMAIN-SUFFIX,tek3shnfk.com
 DOMAIN-SUFFIX,data.tempersyi.com
@@ -1271,6 +1271,7 @@ DOMAIN-SUFFIX,cdn.iads.unitychina.cn
 DOMAIN-SUFFIX,unityads.unitychina.cn
 DOMAIN-SUFFIX,unjrkrxme.com
 DOMAIN-SUFFIX,b.unjs.com
+DOMAIN-SUFFIX,unqm8c9dfk.com
 DOMAIN-SUFFIX,unypud.cn
 DOMAIN-SUFFIX,global-tokenserver-la.headline.uodoo.com
 DOMAIN-SUFFIX,upceshop.cn
@@ -1321,6 +1322,7 @@ DOMAIN-SUFFIX,uyfv.cn
 DOMAIN-SUFFIX,uyunad.com
 DOMAIN-SUFFIX,uzhrtuyij.com
 DOMAIN-SUFFIX,uzt7ud70j1.com
+DOMAIN-SUFFIX,uzzf.com
 DOMAIN-SUFFIX,log.apk.v-mate.mobi
 DOMAIN-SUFFIX,v-vay.com
 DOMAIN-SUFFIX,1.v-x.com.cn
@@ -1641,6 +1643,7 @@ DOMAIN-SUFFIX,apmplus.ap-southeast-1.volces.com
 DOMAIN-SUFFIX,gator.volces.com
 DOMAIN-SUFFIX,mssdk.volces.com
 DOMAIN-SUFFIX,tab.volces.com
+DOMAIN-SUFFIX,volctrack.com
 DOMAIN-SUFFIX,report.voovmeeting.com
 DOMAIN-SUFFIX,voqf299p8.com
 DOMAIN-SUFFIX,vorluic.cn
@@ -1651,6 +1654,7 @@ DOMAIN-SUFFIX,vpxyw6rbv3.com
 DOMAIN-SUFFIX,vpy105341.com
 DOMAIN-SUFFIX,p.vq6nsu.cn
 DOMAIN-SUFFIX,vqbmxyzda.icu
+DOMAIN-SUFFIX,vqnvib2h7e.com
 DOMAIN-SUFFIX,vrbrothers.com
 DOMAIN-SUFFIX,vrr.name
 DOMAIN-SUFFIX,vrufe4ikql.com
@@ -1824,6 +1828,7 @@ DOMAIN-SUFFIX,wmcurwxrjc.com
 DOMAIN-SUFFIX,wmmax.com
 DOMAIN-SUFFIX,wn4x4bzhx.com
 DOMAIN-SUFFIX,wn68din.cn
+DOMAIN-SUFFIX,wndj.net
 DOMAIN-SUFFIX,wnp.com
 DOMAIN-SUFFIX,wnwkt6206g.com
 DOMAIN-SUFFIX,wo30sg1orn.com
@@ -1849,7 +1854,6 @@ DOMAIN-SUFFIX,ios-informationplatform.wps.cn
 DOMAIN-SUFFIX,minfo.wps.cn
 DOMAIN-SUFFIX,pcfg.wps.cn
 DOMAIN-SUFFIX,push.wps.cn
-DOMAIN-SUFFIX,spinfo.wps.cn
 DOMAIN-SUFFIX,update.wps.cn
 DOMAIN-SUFFIX,wpsweb-dc.wps.cn
 DOMAIN-SUFFIX,api-ad-adapter.wps.com
@@ -1954,6 +1958,7 @@ DOMAIN-SUFFIX,ocdn.ad.xelements.cn
 DOMAIN-SUFFIX,v.ad.xelements.cn
 DOMAIN-SUFFIX,xerhibx.cn
 DOMAIN-SUFFIX,xf80vxk3rc.com
+DOMAIN-SUFFIX,xf9o6c6jnp.com
 DOMAIN-SUFFIX,xfjy2fh28b.com
 DOMAIN-SUFFIX,dt.xfyun.cn
 DOMAIN-SUFFIX,xgilfhwxre.com
@@ -2155,6 +2160,7 @@ DOMAIN-SUFFIX,xoqloz3tk.com
 DOMAIN-SUFFIX,xp308.cn
 DOMAIN-SUFFIX,xpcwrgy.cn
 DOMAIN-SUFFIX,xpdgvlxwn.icu
+DOMAIN-SUFFIX,www.xpdyqax.cn
 DOMAIN-SUFFIX,xqblnei.cn
 DOMAIN-SUFFIX,xqhfb9hzrs.com
 DOMAIN-SUFFIX,xqmd2dzzvh.com
@@ -2187,7 +2193,6 @@ DOMAIN-SUFFIX,xukou.net
 DOMAIN-SUFFIX,xulizui6.com
 DOMAIN-SUFFIX,ad.xunkids.com
 DOMAIN-SUFFIX,adsp.xunlei.com
-DOMAIN-SUFFIX,advert-statistic-vip.xunlei.com
 DOMAIN-SUFFIX,advertpay-vip-ssl.xunlei.com
 DOMAIN-SUFFIX,advertpay.vip.xunlei.com
 DOMAIN-SUFFIX,analytics-union.xunlei.com
@@ -2198,7 +2203,6 @@ DOMAIN-SUFFIX,log-vip-ssl.xunlei.com
 DOMAIN-SUFFIX,material.xl7.xunlei.com
 DOMAIN-SUFFIX,scene.vip.xunlei.com
 DOMAIN-SUFFIX,sentry.xunlei.com
-DOMAIN-SUFFIX,sentry-youxi.xunlei.com
 DOMAIN-SUFFIX,soa-vip-ssl.xunlei.com
 DOMAIN-SUFFIX,stat-download-ssl.xunlei.com
 DOMAIN-SUFFIX,stat.download.xunlei.com
@@ -2229,6 +2233,7 @@ DOMAIN-SUFFIX,y0af0gwpdb.com
 DOMAIN-SUFFIX,y2ej3xxfve.com
 DOMAIN-SUFFIX,y2o57pzzx.com
 DOMAIN-SUFFIX,y2vorexg2u.com
+DOMAIN-SUFFIX,y3yuih3s1.com
 DOMAIN-SUFFIX,y40milgijh.com
 DOMAIN-SUFFIX,y4g8fgj6ra.com
 DOMAIN-SUFFIX,y55lspa2v6.com
@@ -2524,6 +2529,14 @@ DOMAIN-SUFFIX,log.zcool.com.cn
 DOMAIN-SUFFIX,zctdqxxbyz.icu
 DOMAIN-SUFFIX,zddsnuxow.icu
 DOMAIN-SUFFIX,zdg2g7v5xe.com
+DOMAIN-SUFFIX,zdh10230lo.com
+DOMAIN-SUFFIX,zdh10231lo.com
+DOMAIN-SUFFIX,zdh10240lo.com
+DOMAIN-SUFFIX,zdh10241lo.com
+DOMAIN-SUFFIX,zdh10250lo.com
+DOMAIN-SUFFIX,zdh10251lo.com
+DOMAIN-SUFFIX,zdh10260lo.com
+DOMAIN-SUFFIX,zdh10261lo.com
 DOMAIN-SUFFIX,zdl4o6sp3.com
 DOMAIN-SUFFIX,sentry-monitor-new.zdmimg.com
 DOMAIN-SUFFIX,zdr6wn2f5.com
