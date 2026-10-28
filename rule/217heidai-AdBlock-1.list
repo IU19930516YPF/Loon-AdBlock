@@ -1,5 +1,5 @@
 # 本文件来源: https://github.com/217heidai/adblockfilters (rules/adblockloonlite.list，去广告合并规则 Lite 版)
-# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 1/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-28）
+# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 1/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-29）
 # 上游: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloonlite.list
 
 DOMAIN-SUFFIX,kwflvcdn.000dn.com
@@ -2266,7 +2266,6 @@ DOMAIN-SUFFIX,daciuehpyf.com
 DOMAIN-SUFFIX,dadde.cn
 DOMAIN-SUFFIX,dadzz.cn
 DOMAIN-SUFFIX,dagwi.cn
-DOMAIN-SUFFIX,dajars.shop
 DOMAIN-SUFFIX,daliantong.com.cn
 DOMAIN-SUFFIX,mcds.dalyfeds.com
 DOMAIN-SUFFIX,profiler-collector.dalyfeds.com
