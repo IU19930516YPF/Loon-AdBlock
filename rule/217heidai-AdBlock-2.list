@@ -2,8 +2,6 @@
 # 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 2/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-28）
 # 上游: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloonlite.list
 
-DOMAIN-SUFFIX,smetrics.sandbox.ford.com
-DOMAIN-SUFFIX,3zmb53.fordmodels.cn
 DOMAIN-SUFFIX,forestseasons.com.cn
 DOMAIN-SUFFIX,formysql.com
 DOMAIN-SUFFIX,sentry-web.fosunhanig.com
@@ -2740,7 +2738,6 @@ DOMAIN-SUFFIX,qlfvmcy1sp.com
 DOMAIN-SUFFIX,qls7v6jd3.com
 DOMAIN-SUFFIX,qlscg0qnz.com
 DOMAIN-SUFFIX,a6-remad.qm989.com
-DOMAIN-SUFFIX,t-remad.qm989.com
 DOMAIN-SUFFIX,logger.qmai.cn
 DOMAIN-SUFFIX,qmj89db55u.com
 DOMAIN-SUFFIX,qmtrnqp900.com
@@ -2836,3 +2833,5 @@ DOMAIN-SUFFIX,logs.game.qq.com
 DOMAIN-SUFFIX,logsdk.qq.com
 DOMAIN-SUFFIX,masdk.3g.qq.com
 DOMAIN-SUFFIX,masdkv6.3g.qq.com
+DOMAIN-SUFFIX,mazu.3g.qq.com
+DOMAIN-SUFFIX,mazu.m.qq.com
