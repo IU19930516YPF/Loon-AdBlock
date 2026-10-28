@@ -2,6 +2,7 @@
 # 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 2/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-28）
 # 上游: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloonlite.list
 
+DOMAIN-SUFFIX,smetrics.sandbox.ford.com
 DOMAIN-SUFFIX,3zmb53.fordmodels.cn
 DOMAIN-SUFFIX,forestseasons.com.cn
 DOMAIN-SUFFIX,formysql.com
@@ -514,7 +515,6 @@ DOMAIN-SUFFIX,dragate-sg.dc.heytapmobi.com
 DOMAIN-SUFFIX,epoch-id.cdo.heytapmobi.com
 DOMAIN-SUFFIX,httpdns.ocloud.heytapmobi.com
 DOMAIN-SUFFIX,i-sg01a.ocloud.heytapmobi.com
-DOMAIN-SUFFIX,iot-earbuds-cn.heytapmobi.com
 DOMAIN-SUFFIX,mdp-usertrace-cn.heytapmobi.com
 DOMAIN-SUFFIX,obus-cn.dc.heytapmobi.com
 DOMAIN-SUFFIX,obus-config-cn.heytapmobi.com
@@ -779,6 +779,7 @@ DOMAIN-SUFFIX,eu-1.nebula-collector.huawei.com
 DOMAIN-SUFFIX,hwa.his.huawei.com
 DOMAIN-SUFFIX,httpdns.huaweicloud.com
 DOMAIN-SUFFIX,uba.huaweicloud.com
+DOMAIN-SUFFIX,e.api.adx.huazirc.com
 DOMAIN-SUFFIX,inner-hw.huazirc.com
 DOMAIN-SUFFIX,hubcloud.com.cn
 DOMAIN-SUFFIX,umami.huexef.cn
@@ -835,6 +836,7 @@ DOMAIN-SUFFIX,sdk.hzzfcm.com
 DOMAIN-SUFFIX,i-fk.cn
 DOMAIN-SUFFIX,i-generation.jp
 DOMAIN-SUFFIX,i06s7yrhn1.com
+DOMAIN-SUFFIX,i0gh0cpwb.com
 DOMAIN-SUFFIX,i12het785.com
 DOMAIN-SUFFIX,i16vlgqdhh.com
 DOMAIN-SUFFIX,i27jhc4ut0.com
@@ -2304,6 +2306,7 @@ DOMAIN-SUFFIX,o0rnzwzst5.com
 DOMAIN-SUFFIX,o17kbwlq9p.com
 DOMAIN-SUFFIX,o1fhfeu6qa.com
 DOMAIN-SUFFIX,o28wg9kq8i.com
+DOMAIN-SUFFIX,o35jufwu6.com
 DOMAIN-SUFFIX,o40d17vln.com
 DOMAIN-SUFFIX,o522zsxbgf.com
 DOMAIN-SUFFIX,o5y2zd1lq8.com
@@ -2438,6 +2441,7 @@ DOMAIN-SUFFIX,p43c4oysmb.com
 DOMAIN-SUFFIX,p4dc8ve6i.com
 DOMAIN-SUFFIX,p5doaulee2.com
 DOMAIN-SUFFIX,p5jrngqnp.com
+DOMAIN-SUFFIX,p5regbg09.com
 DOMAIN-SUFFIX,p5si0mu8u7.com
 DOMAIN-SUFFIX,p66jed4iv.com
 DOMAIN-SUFFIX,p6q6qpze3f.com
@@ -2828,3 +2832,7 @@ DOMAIN-SUFFIX,log.tbs.qq.com
 DOMAIN-SUFFIX,log.weixin.qq.com
 DOMAIN-SUFFIX,log.wtlogin.qq.com
 DOMAIN-SUFFIX,log1.wtlogin.qq.com
+DOMAIN-SUFFIX,logs.game.qq.com
+DOMAIN-SUFFIX,logsdk.qq.com
+DOMAIN-SUFFIX,masdk.3g.qq.com
+DOMAIN-SUFFIX,masdkv6.3g.qq.com
