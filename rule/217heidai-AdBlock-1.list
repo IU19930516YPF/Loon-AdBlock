@@ -1400,7 +1400,6 @@ DOMAIN-SUFFIX,app-analytics-services.com
 DOMAIN-SUFFIX,app-measurement.com
 DOMAIN-SUFFIX,mobile.appchina.com
 DOMAIN-SUFFIX,appdriver.cn
-DOMAIN-SUFFIX,www.appdriver.com.cn
 DOMAIN-SUFFIX,ads.apple.com
 DOMAIN-SUFFIX,experiments.apple.com
 DOMAIN-SUFFIX,iadcontent.apple.com
@@ -1665,9 +1664,7 @@ DOMAIN-SUFFIX,tuplogpublic.bangcdn.net
 DOMAIN-SUFFIX,log.banjixiaoguanjia.com
 DOMAIN-SUFFIX,sentry.banjixiaoguanjia.com
 DOMAIN-SUFFIX,sentry.bankneo.co.id
-DOMAIN-SUFFIX,active.baofeng.com
 DOMAIN-SUFFIX,midinfo.baofeng.com
-DOMAIN-SUFFIX,config.baofeng.net
 DOMAIN-SUFFIX,ploy.baofeng.net
 DOMAIN-SUFFIX,a.baomihua.com
 DOMAIN-SUFFIX,bartender.cc
@@ -2462,7 +2459,6 @@ DOMAIN-SUFFIX,metrics-picture.dreport.meituan.net.eo.dnse1.com
 DOMAIN-SUFFIX,tracking.ksztone.com.eo.dnse2.com
 DOMAIN-SUFFIX,posthog.casinoplus.top.eo.dnse3.com
 DOMAIN-SUFFIX,akamai-apigateway-gio-analytics.tesla.cn.eo.dnse4.com
-DOMAIN-SUFFIX,ads-vp5-xhscdn.tliveapp.com.cdn.dnsv1.com
 DOMAIN-SUFFIX,beacon.cdn.qq.com.cdn.dnsv1.com
 DOMAIN-SUFFIX,dnyzbp.cn
 DOMAIN-SUFFIX,do-global.com
@@ -2871,3 +2867,5 @@ DOMAIN-SUFFIX,bdu.focus.cn
 DOMAIN-SUFFIX,foisonad.com
 DOMAIN-SUFFIX,metrics.ford.com
 DOMAIN-SUFFIX,smetrics.ford.com
+DOMAIN-SUFFIX,smetrics.sandbox.ford.com
+DOMAIN-SUFFIX,3zmb53.fordmodels.cn
