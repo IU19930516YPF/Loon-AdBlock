@@ -2,8 +2,6 @@
 # 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 3/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-28）
 # 上游: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloonlite.list
 
-DOMAIN-SUFFIX,mazu.3g.qq.com
-DOMAIN-SUFFIX,mazu.m.qq.com
 DOMAIN-SUFFIX,mcgi.v.qq.com
 DOMAIN-SUFFIX,mdevstat.qqlive.qq.com
 DOMAIN-SUFFIX,mini2015.qq.com
@@ -154,7 +152,6 @@ DOMAIN-SUFFIX,tnc3-alisc1.zijieapi.com.queniuyk.com
 DOMAIN-SUFFIX,quiavo.shop
 DOMAIN-SUFFIX,chat.quickcep.com
 DOMAIN-SUFFIX,qujishu.com
-DOMAIN-SUFFIX,m.qulishi.com
 DOMAIN-SUFFIX,sbbd1.qulishi.com
 DOMAIN-SUFFIX,bc.qunar.com
 DOMAIN-SUFFIX,log.flight.qunar.com
