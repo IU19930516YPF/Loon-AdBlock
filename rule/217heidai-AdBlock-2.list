@@ -1,10 +1,7 @@
 # 本文件来源: https://github.com/217heidai/adblockfilters (rules/adblockloonlite.list，去广告合并规则 Lite 版)
-# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 2/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-27）
+# 说明: 8258 条 DOMAIN-SUFFIX 拆分为 3 个文件（本文件为第 2/3 部分），针对国内域名广告拦截，每 8 小时更新；已通过安全扫描（无番茄/红果整域危险规则）。（同步 2026-10-28）
 # 上游: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloonlite.list
 
-DOMAIN-SUFFIX,metrics.ford.com
-DOMAIN-SUFFIX,smetrics.ford.com
-DOMAIN-SUFFIX,smetrics.sandbox.ford.com
 DOMAIN-SUFFIX,3zmb53.fordmodels.cn
 DOMAIN-SUFFIX,forestseasons.com.cn
 DOMAIN-SUFFIX,formysql.com
@@ -72,7 +69,6 @@ DOMAIN-SUFFIX,fwlkegiqfn.icu
 DOMAIN-SUFFIX,fwlkokvvkx.icu
 DOMAIN-SUFFIX,fwmbjrl.cn
 DOMAIN-SUFFIX,dmym.fwol.cn
-DOMAIN-SUFFIX,down.fwqlt.com
 DOMAIN-SUFFIX,fwslpa9ks.com
 DOMAIN-SUFFIX,fwujkh7jw.com
 DOMAIN-SUFFIX,fwvzx907rr.com
@@ -136,7 +132,6 @@ DOMAIN-SUFFIX,tralog.ganji.com
 DOMAIN-SUFFIX,static.gaomaer.cn
 DOMAIN-SUFFIX,gaoshouyou.com
 DOMAIN-SUFFIX,images8.gaotie.cn
-DOMAIN-SUFFIX,gardenmarket.shop
 DOMAIN-SUFFIX,trk.gardnerdenver.com.cn
 DOMAIN-SUFFIX,stats.gateio.ch
 DOMAIN-SUFFIX,gb0143odqh.com
@@ -189,7 +184,6 @@ DOMAIN-SUFFIX,ggo10140lq.com
 DOMAIN-SUFFIX,ggo10141lq.com
 DOMAIN-SUFFIX,ggo10150lq.com
 DOMAIN-SUFFIX,ggo10151lq.com
-DOMAIN-SUFFIX,shqdown.ggzuhao.com
 DOMAIN-SUFFIX,ghjyw4h23.com
 DOMAIN-SUFFIX,ghsnhjk.cn
 DOMAIN-SUFFIX,gi.cn
@@ -286,7 +280,6 @@ DOMAIN-SUFFIX,gojunkclean.cn
 DOMAIN-SUFFIX,goldwavechina.cn
 DOMAIN-SUFFIX,prom.gome.com.cn
 DOMAIN-SUFFIX,gongxifc.com
-DOMAIN-SUFFIX,cdn.file6.goodid.com
 DOMAIN-SUFFIX,google-analytics-cn.com
 DOMAIN-SUFFIX,google-analytics.com
 DOMAIN-SUFFIX,ads.google.cn
@@ -382,7 +375,6 @@ DOMAIN-SUFFIX,gw7jpuouik.com
 DOMAIN-SUFFIX,gwbb1p2t9s.com
 DOMAIN-SUFFIX,res.gwifi.com.cn
 DOMAIN-SUFFIX,gwmrb.cn
-DOMAIN-SUFFIX,pvsa.gxfugy.cn
 DOMAIN-SUFFIX,gxgbvmg.cn
 DOMAIN-SUFFIX,gxhzv.cn
 DOMAIN-SUFFIX,gxtvu.com.cn
@@ -441,7 +433,6 @@ DOMAIN-SUFFIX,as1.m.hao123.com
 DOMAIN-SUFFIX,mini.hao123.com
 DOMAIN-SUFFIX,2.haoxue360.com
 DOMAIN-SUFFIX,haozhuangji.com
-DOMAIN-SUFFIX,download.haozip.com
 DOMAIN-SUFFIX,log.dc.cn.happyelements.com
 DOMAIN-SUFFIX,hapying.com
 DOMAIN-SUFFIX,harvestlanshop.shop
@@ -754,7 +745,6 @@ DOMAIN-SUFFIX,supertest.hqsmartcloud.com
 DOMAIN-SUFFIX,support.hqts.com
 DOMAIN-SUFFIX,hrhojxbkc2.com
 DOMAIN-SUFFIX,hrro55g56.com
-DOMAIN-SUFFIX,hseda.com
 DOMAIN-SUFFIX,hsrgnac.cn
 DOMAIN-SUFFIX,g.hsw.cn
 DOMAIN-SUFFIX,hswxsatk7x.com
@@ -948,7 +938,6 @@ DOMAIN-SUFFIX,ikr42qvlg.com
 DOMAIN-SUFFIX,posthog.ikuai8.com
 DOMAIN-SUFFIX,umami.ikxin.com
 DOMAIN-SUFFIX,ilbceb6d60.com
-DOMAIN-SUFFIX,static.ilclock.com
 DOMAIN-SUFFIX,smetrics.illumina.com.cn
 DOMAIN-SUFFIX,metrics.ilovematlab.cn
 DOMAIN-SUFFIX,smetrics.ilovematlab.cn
@@ -1182,7 +1171,6 @@ DOMAIN-SUFFIX,jhzfwl.cn
 DOMAIN-SUFFIX,jia183d6v.com
 DOMAIN-SUFFIX,wj.jiancai365.cn
 DOMAIN-SUFFIX,ads.jianchiapp.com
-DOMAIN-SUFFIX,acc.jiangsujiaxue.com
 DOMAIN-SUFFIX,ahm.jiankang123.net
 DOMAIN-SUFFIX,jiankongbao.com
 DOMAIN-SUFFIX,tr.jianshu.com
@@ -1310,7 +1298,6 @@ DOMAIN-SUFFIX,kab201k0xs.com
 DOMAIN-SUFFIX,ds1.kaijia.com
 DOMAIN-SUFFIX,kajicam.com
 DOMAIN-SUFFIX,js.kalvinbg.cn
-DOMAIN-SUFFIX,download.kaobeitu.com
 DOMAIN-SUFFIX,smetrics.karcher.cn
 DOMAIN-SUFFIX,kasgnh7xwl.com
 DOMAIN-SUFFIX,kb894lngt.com
@@ -2196,7 +2183,6 @@ DOMAIN-SUFFIX,nalook.com
 DOMAIN-SUFFIX,fp.nanrenwo.net
 DOMAIN-SUFFIX,nar17stuqf.com
 DOMAIN-SUFFIX,nasimobi.com
-DOMAIN-SUFFIX,dl.natgo.cn
 DOMAIN-SUFFIX,nb4ds7c13d.com
 DOMAIN-SUFFIX,nb5a7g5r1.com
 DOMAIN-SUFFIX,nbvetzyqt.icu
@@ -2494,10 +2480,7 @@ DOMAIN-SUFFIX,ivy.pconline.com.cn
 DOMAIN-SUFFIX,pcpaemkbmy.icu
 DOMAIN-SUFFIX,pcpop.com
 DOMAIN-SUFFIX,pcs-wps.net
-DOMAIN-SUFFIX,pcupd.com
 DOMAIN-SUFFIX,video-dsp.pddpic.com
-DOMAIN-SUFFIX,download.pdf00.cn
-DOMAIN-SUFFIX,download.pdf00.com
 DOMAIN-SUFFIX,pdfxd.com
 DOMAIN-SUFFIX,pdhhmf.cn
 DOMAIN-SUFFIX,pdjxoscm7.com
@@ -2532,7 +2515,6 @@ DOMAIN-SUFFIX,img50.pingguolv.com
 DOMAIN-SUFFIX,hk-sentry.pingpongx.com
 DOMAIN-SUFFIX,api.pingstart.com
 DOMAIN-SUFFIX,bd1.pipaw.com
-DOMAIN-SUFFIX,pitbulllpl.shop
 DOMAIN-SUFFIX,pitbullmens.club
 DOMAIN-SUFFIX,pitbullmensp.shop
 DOMAIN-SUFFIX,pitbullsportsa.shop
@@ -2846,4 +2828,3 @@ DOMAIN-SUFFIX,log.tbs.qq.com
 DOMAIN-SUFFIX,log.weixin.qq.com
 DOMAIN-SUFFIX,log.wtlogin.qq.com
 DOMAIN-SUFFIX,log1.wtlogin.qq.com
-DOMAIN-SUFFIX,logs.game.qq.com
