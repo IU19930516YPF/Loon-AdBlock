@@ -2,6 +2,8 @@
 
 自用 Loon 综合去广告 + 分流：规则 + 插件，基于开源项目整理。
 
+[Hosted on CubePath](https://cubepath.com/?utm_source=open-source&utm_medium=referral&utm_campaign=hosted-on-cubepath)
+
 ## 一键订阅（推荐）
 
 Loon → 配置 → 插件 → 右上角 + → 从链接导入：
