@@ -1,6 +1,6 @@
 # 本文件来源: https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/rejectAd.list (奶思/广告拦截合集)
-# 清理记录(2026-10-17): 已删除上游"番茄小说"整个段落(17条规则+6个IP段),避免番茄小说App无法使用; 上游无红果专属段落,无需处理; 其余与上游一致。
-# 103516.xyz 的两个.lsr链接已失效(域名跳转到Telegram),未采用。
+# 清理记录: 已删除上游"番茄小说"整个段落，避免番茄小说App无法使用；上游无红果专属段落；其余与上游一致。（同步 2026-11-21）
+# 103516.xyz 的两个.lsr链接已失效(域名跳转到Telegram)，未采用。
 
 #!name=广告拦截合集-规则
 #!desc=(F)针对部分APP和小程序广告进行拦截，某些APP要清除缓存或者重新安装APP，拦截广告才会生效！可以配置到规则或者插件
@@ -597,7 +597,6 @@ DOMAIN, httpdns.baidubce.com
 DOMAIN, lc.map.baidu.com
 
 # > 百度贴吧
-DOMAIN, 180.76.76.200
 # 屏蔽域名dns查询
 IP-CIDR, 180.76.76.200/32, no-resolve
 
